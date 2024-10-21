@@ -5,7 +5,7 @@
 \citation{chao2021dexycb,garcia2018first,llop2022benchmarking}
 \citation{billings2019silhonet,peng2019pvnet}
 \providecommand \oddpage@label [2]{}
-\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {I}Introduction}{1}}
 \newlabel{sec:intro}{{I}{1}}
 \citation{doosti2020hope,lin2023harmonious,wang2023interacting,woo2023survey}
 \citation{romero2022embodied}
@@ -33,10 +33,10 @@
 \citation{li2018deepim}
 \citation{dosovitskiy2015flownet}
 \citation{wen2020se}
-\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {II}Related Work}{3}}
 \newlabel{sec:Related}{{II}{3}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-A}}Object Pose Estimation from a Single Image}{3}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-B}}Deep Learning-based Object Pose Tracking}{3}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-A}}Object Pose Estimation from a Single Image}{3}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-B}}Deep Learning-based Object Pose Tracking}{3}}
 \citation{deng2021poserbpf}
 \citation{majcher20203d}
 \citation{zhong2020seeing}
@@ -44,8 +44,15 @@
 \citation{vaswani2017attention}
 \citation{dosovitskiy2020image}
 \citation{liu2021swin,guo2022cmt}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {II-C}}Transformer-based Methods}{4}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {III}Method}{4}{}\protected@file@percent }
+\citation{vaswani2017attention}
+\citation{yu2023cattrack}
+\citation{amini2022yolopose}
+\citation{wen2024foundationpose}
+\citation{periyasamy2024motpose}
+\citation{li2024efficient}
+\citation{li2021pose}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-C}}Transformer-based Methods}{4}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {II-D}}Transformer-based Methods}{4}}
 \citation{carion2020end}
 \citation{lin2017feature}
 \citation{he2016deep}
@@ -53,39 +60,38 @@
 \citation{oberweger2018making,tekin2018real,rad2017bb8}
 \citation{jaegle2021perceiver}
 \citation{vaswani2017attention}
-\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Overview of the proposed framework for in-hand object pose tracking. Our approach leverages transformers to capture both spatial relationships within individual frames and temporal dependencies across image sequences, enabling robust frame-wise object pose estimation. To address challenges posed by heavy occlusion or motion blur, a visibility-aware module integrates temporally-aware features and aggregates pose information from neighboring frames. This allows the model to maintain accurate pose estimates even in difficult scenarios where direct visual cues are limited or absent.\relax }}{5}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {III}Method}{5}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-A}}Spatial-Temporal Transformer}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-A}1}CNN Backbone}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-A}2}Spatial Transformer}{5}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-A}3}Temporal Transformer}{5}}
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Overview of the proposed framework for in-hand object pose tracking. Our approach leverages transformers to capture both spatial relationships within individual frames and temporal dependencies across image sequences, enabling robust frame-wise object pose estimation. To address challenges posed by heavy occlusion or motion blur, a visibility-aware module integrates temporally-aware features and aggregates pose information from neighboring frames. This allows the model to maintain accurate pose estimates even in difficult scenarios where direct visual cues are limited or absent.\relax }}{6}}
 \providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
-\newlabel{fig:overview}{{1}{5}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-A}}Spatial-Temporal Transformer}{5}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-A}1}CNN Backbone}{5}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-A}2}Spatial Transformer}{5}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-A}3}Temporal Transformer}{5}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-B}}Visibility-aware Object Pose Estimation under occlusions}{6}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-B}1}Visibility Estimation.}{6}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsubsection}{\numberline {\mbox  {III-B}2}Object Pose Prediction Under Heavy Occlusion.}{6}{}\protected@file@percent }
+\newlabel{fig:overview}{{1}{6}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-B}}Visibility-aware Object Pose Estimation under occlusions}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-B}1}Visibility Estimation.}{6}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {\unhbox \voidb@x \hbox {III-B}2}Object Pose Prediction Under Heavy Occlusion.}{7}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {III-C}}Loss Function}{7}}
 \citation{chao2021dexycb}
 \citation{garcia2018first}
 \citation{hampali2020honnotate}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {III-C}}Loss Function}{7}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {section}{\numberline {IV}Evaluation}{7}{}\protected@file@percent }
-\newlabel{sec:Evaluation}{{IV}{7}}
 \citation{chao2021dexycb}
 \citation{garcia2018first}
 \citation{hampali2020honnotate}
 \citation{he2016deep}
 \citation{he2017mask}
+\@writefile{toc}{\contentsline {section}{\numberline {IV}Evaluation}{8}}
+\newlabel{sec:Evaluation}{{IV}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-A}}Datasets}{8}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-B}}Implementation Details}{8}}
 \citation{wang2023deep}
 \citation{wang2023deep}
 \citation{castro2023crt}
 \citation{castro2023crt}
 \citation{castro2023crt}
 \citation{wang2023deep}
-\citation{wang2023deep}
-\citation{castro2023crt}
 \citation{castro2023crt}
 \citation{wang2023deep}
-\citation{wang2023deep}
-\citation{castro2023crt}
 \citation{wang2023deep}
 \citation{wang2023deep}
 \citation{castro2023crt}
@@ -128,15 +134,6 @@
 \citation{wang2023deep}
 \citation{castro2023crt}
 \citation{wang2021gdr}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-A}}Datasets}{8}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-B}}Implementation Details}{8}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-C}}Evaluation Metric}{8}{}\protected@file@percent }
-\newlabel{sec:metric}{{\mbox  {IV-C}}{8}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-D}}Result}{8}{}\protected@file@percent }
-\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Qualitative Comparison of the state-of-the-art single-view method \cite  {castro2023crt}, video-based method \cite  {wang2023deep}, and our method. The proposed method robustly generates more stable and accurate poses over time than previous approaches. (a) are the input RGBD images. (b) shows the rendered images using ground truth hand and object poses. (c), (d), and (e) display the rendered images using ground truth hand poses and object poses predicted by our method, \cite  {wang2023deep}, and \cite  {castro2023crt}, respectively.\relax }}{9}{}\protected@file@percent }
-\newlabel{fig:result1}{{2}{9}}
-\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Qualitative Comparison of the state-of-the-art single-view method \cite  {castro2023crt}, video-based method \cite  {wang2023deep}, and our method. Here we only show results on frames under heavy occlusion (frames with a visibility score \( v_i \) smaller than \( \delta = 0.5 \)).\relax }}{10}{}\protected@file@percent }
-\newlabel{fig:result2}{{3}{10}}
 \citation{chao2021dexycb}
 \citation{garcia2018first}
 \citation{hampali2020honnotate}
@@ -158,17 +155,23 @@
 \citation{tian2022large}
 \citation{wang2023deep}
 \citation{wang2023deep}
-\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Quantitative results on the DexYCB \cite  {chao2021dexycb}, FPHAB \cite  {garcia2018first}, and HO-3D \cite  {hampali2020honnotate} datasets. Single image -based methods \cite  {billings2019silhonet, peng2019pvnet, wang2021gdr, castro2023crt}, and tracking methods \cite  {sun2021robust, huang2021pixel, he2021ffb6d, stoiber2020sparse, stoiber2022srt3d, tian2022large, wang2023deep} are compared with our proposed method (Ours).\relax }}{11}{}\protected@file@percent }
-\newlabel{tab:dataset_ex}{{1}{11}}
-\@writefile{toc}{\contentsline {subsection}{\numberline {\mbox  {IV-E}}Ablation Study}{11}{}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-C}}Evaluation Metric}{9}}
+\newlabel{sec:metric}{{\unhbox \voidb@x \hbox {IV-C}}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-D}}Result}{9}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {\unhbox \voidb@x \hbox {IV-E}}Ablation Study}{9}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Qualitative Comparison of the state-of-the-art single-view method \cite  {castro2023crt}, video-based method \cite  {wang2023deep}, and our method. The proposed method robustly generates more stable and accurate poses over time than previous approaches. (a) are the input RGBD images. (b) shows the rendered images using ground truth object poses. (c), (d), and (e) display the rendered images using predicted object poses.\relax }}{10}}
+\newlabel{fig:result1}{{2}{10}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces Qualitative Comparison of the state-of-the-art single-view method \cite  {castro2023crt}, video-based method \cite  {wang2023deep}, and our method. Here we only show results on frames under heavy occlusion (frames with a visibility score \( v_i \) smaller than \( \delta = 0.5 \)). (a) are the input RGBD images. (b) shows the rendered images using ground truth hand and object poses. (c), (d), and (e) display the rendered images using ground truth hand poses and predicted object poses.\relax }}{11}}
+\newlabel{fig:result2}{{3}{11}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Quantitative results on the DexYCB \cite  {chao2021dexycb}, FPHAB \cite  {garcia2018first}, and HO-3D \cite  {hampali2020honnotate} datasets. Single image -based methods \cite  {billings2019silhonet, peng2019pvnet, wang2021gdr, castro2023crt}, and tracking methods \cite  {sun2021robust, huang2021pixel, he2021ffb6d, stoiber2020sparse, stoiber2022srt3d, tian2022large, wang2023deep} are compared with our proposed method (Ours).\relax }}{12}}
+\newlabel{tab:dataset_ex}{{1}{12}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Quantitative results on the DexYCB \cite  {chao2021dexycb}, FPHAB \cite  {garcia2018first}, and HO-3D \cite  {hampali2020honnotate} datasets. However, here we only evaluate methods on frames under heavy occlusion (frames with a visibility score \( v_i \) smaller than \( \delta = 0.5 \)). Single image-based methods \cite  {billings2019silhonet, peng2019pvnet, wang2021gdr, castro2023crt}, and tracking methods \cite  {sun2021robust, huang2021pixel, he2021ffb6d, stoiber2020sparse, stoiber2022srt3d, tian2022large, wang2023deep} are compared with our proposed method (Ours).\relax }}{12}}
+\newlabel{tab:occlusion_ex}{{2}{12}}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Ablation Study. $\mathcal  {M}_{s}$ spatial transformer, $\mathcal  {M}_{t}$ temporal transformer, $\mathcal  {M}_{va}$ visibility-aware object pose estimation module.\relax }}{12}}
+\newlabel{tab:ablation_ex}{{3}{12}}
 \bibstyle{IEEEtran}
 \bibdata{References}
 \bibcite{marullo20236d}{1}
-\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Quantitative results on the DexYCB \cite  {chao2021dexycb}, FPHAB \cite  {garcia2018first}, and HO-3D \cite  {hampali2020honnotate} datasets. However, here we only evaluate methods on frames under heavy occlusion (frames with a visibility score \( v_i \) smaller than \( \delta = 0.5 \)). Single image-based methods \cite  {billings2019silhonet, peng2019pvnet, wang2021gdr, castro2023crt}, and tracking methods \cite  {sun2021robust, huang2021pixel, he2021ffb6d, stoiber2020sparse, stoiber2022srt3d, tian2022large, wang2023deep} are compared with our proposed method (Ours).\relax }}{12}{}\protected@file@percent }
-\newlabel{tab:occlusion_ex}{{2}{12}}
-\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Ablation Study. $\mathcal  {M}_{s}$ spatial transformer, $\mathcal  {M}_{t}$ temporal transformer, $\mathcal  {M}_{va}$ visibility-aware object pose estimation module.\relax }}{12}{}\protected@file@percent }
-\newlabel{tab:ablation_ex}{{3}{12}}
-\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{12}{}\protected@file@percent }
 \bibcite{du2021vision}{2}
 \bibcite{cho2024integration}{3}
 \bibcite{hoang2024graspability}{4}
@@ -193,6 +196,8 @@
 \bibcite{he2020pvn3d}{23}
 \bibcite{hong2024rdpn6d}{24}
 \bibcite{lowe1999object}{25}
+\@writefile{toc}{\contentsline {section}{\numberline {V}Conclusion}{13}}
+\@writefile{toc}{\contentsline {section}{REFERENCES}{13}}
 \bibcite{lepetit2005monocular}{26}
 \bibcite{xiang2017posecnn}{27}
 \bibcite{kehl2017ssd}{28}
@@ -212,7 +217,6 @@
 \bibcite{tian2022large}{42}
 \bibcite{garon2017deep}{43}
 \bibcite{marougkas2020track}{44}
-\@writefile{toc}{\contentsline {section}{REFERENCES}{13}{}\protected@file@percent }
 \bibcite{manhardt2018deep}{45}
 \bibcite{li2018deepim}{46}
 \bibcite{dosovitskiy2015flownet}{47}
@@ -225,17 +229,36 @@
 \bibcite{dosovitskiy2020image}{54}
 \bibcite{liu2021swin}{55}
 \bibcite{guo2022cmt}{56}
-\bibcite{carion2020end}{57}
-\bibcite{lin2017feature}{58}
-\bibcite{he2016deep}{59}
-\bibcite{jaegle2021perceiver}{60}
-\bibcite{hampali2020honnotate}{61}
-\bibcite{he2017mask}{62}
-\bibcite{hinterstoisser2012model}{63}
-\bibcite{bregier2017symmetry}{64}
-\bibcite{he2021ffb6d}{65}
-\bibcite{stoiber2022srt3d}{66}
-\@writefile{toc}{\contentsline {subsection}{Phan Xuan Tan}{14}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{Dinh-Cuong Hoang}{14}{}\protected@file@percent }
-\@writefile{toc}{\contentsline {subsection}{Eiji Kamioka}{14}{}\protected@file@percent }
-\gdef \@abspage@last{14}
+\bibcite{yu2023cattrack}{57}
+\bibcite{amini2022yolopose}{58}
+\bibcite{wen2024foundationpose}{59}
+\bibcite{periyasamy2024motpose}{60}
+\bibcite{li2024efficient}{61}
+\bibcite{li2021pose}{62}
+\bibcite{carion2020end}{63}
+\bibcite{lin2017feature}{64}
+\bibcite{he2016deep}{65}
+\bibcite{jaegle2021perceiver}{66}
+\bibcite{hampali2020honnotate}{67}
+\bibcite{he2017mask}{68}
+\bibcite{hinterstoisser2012model}{69}
+\bibcite{bregier2017symmetry}{70}
+\bibcite{he2021ffb6d}{71}
+\bibcite{stoiber2022srt3d}{72}
+\@writefile{toc}{\contentsline {subsection}{Phan Xuan Tan}{15}}
+\@writefile{toc}{\contentsline {subsection}{Dinh-Cuong Hoang}{15}}
+\@writefile{toc}{\contentsline {subsection}{Eiji Kamioka}{15}}
+\@writefile{toc}{\contentsline {subsection}{Anh-Nhat Nguyen}{15}}
+\@writefile{toc}{\contentsline {subsection}{Duc-Thanh Tran}{15}}
+\@writefile{toc}{\contentsline {subsection}{Van-Hiep Duong}{15}}
+\@writefile{toc}{\contentsline {subsection}{Anh-Truong Mai}{15}}
+\@writefile{toc}{\contentsline {subsection}{Duc-Long Pham}{15}}
+\@writefile{toc}{\contentsline {subsection}{Khanh-Toan Phan}{16}}
+\@writefile{toc}{\contentsline {subsection}{Van-Hiep Duong}{16}}
+\@writefile{toc}{\contentsline {subsection}{Xuan-Tung Dinh}{16}}
+\@writefile{toc}{\contentsline {subsection}{TranThiThuyTrang}{16}}
+\@writefile{toc}{\contentsline {subsection}{Xuan-Duong Pham}{16}}
+\@writefile{toc}{\contentsline {subsection}{Nhat-Linh Nguyen}{16}}
+\@writefile{toc}{\contentsline {subsection}{Viet-Anh Trinh}{16}}
+\@writefile{toc}{\contentsline {subsection}{Khanh-Duong Tran}{16}}
+\@writefile{toc}{\contentsline {subsection}{Son-Anh Bui}{16}}

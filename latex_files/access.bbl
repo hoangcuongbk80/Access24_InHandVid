@@ -326,6 +326,39 @@ J.~Guo, K.~Han, H.~Wu, Y.~Tang, X.~Chen, Y.~Wang, and C.~Xu, ``Cmt:
   \emph{Proceedings of the IEEE/CVF conference on computer vision and pattern
   recognition}, 2022, pp. 12\,175--12\,185.
 
+\bibitem{yu2023cattrack}
+S.~Yu, D.-H. Zhai, Y.~Xia, D.~Li, and S.~Zhao, ``Cattrack: Single-stage
+  category-level 6d object pose tracking via convolution and vision
+  transformer,'' \emph{IEEE Transactions on Multimedia}, vol.~26, pp.
+  1665--1680, 2023.
+
+\bibitem{amini2022yolopose}
+A.~Amini, A.~Selvam~Periyasamy, and S.~Behnke, ``Yolopose: Transformer-based
+  multi-object 6d pose estimation using keypoint regression,'' in
+  \emph{International Conference on Intelligent Autonomous Systems}.\hskip 1em
+  plus 0.5em minus 0.4em\relax Springer, 2022, pp. 392--406.
+
+\bibitem{wen2024foundationpose}
+B.~Wen, W.~Yang, J.~Kautz, and S.~Birchfield, ``Foundationpose: Unified 6d pose
+  estimation and tracking of novel objects,'' in \emph{Proceedings of the
+  IEEE/CVF Conference on Computer Vision and Pattern Recognition}, 2024, pp.
+  17\,868--17\,879.
+
+\bibitem{periyasamy2024motpose}
+A.~S. Periyasamy and S.~Behnke, ``Motpose: Multi-object 6d pose estimation for
+  dynamic video sequences using attention-based temporal fusion,'' \emph{arXiv
+  preprint arXiv:2403.09309}, 2024.
+
+\bibitem{li2024efficient}
+R.~Li, Q.~Li, S.~Yang, X.~Zeng, and A.~Yan, ``An efficient and accurate 2d
+  human pose estimation method using vttranspose network,'' \emph{Scientific
+  Reports}, vol.~14, no.~1, p. 7608, 2024.
+
+\bibitem{li2021pose}
+K.~Li, S.~Wang, X.~Zhang, Y.~Xu, W.~Xu, and Z.~Tu, ``Pose recognition with
+  cascade transformers,'' in \emph{Proceedings of the IEEE/CVF conference on
+  computer vision and pattern recognition}, 2021, pp. 1944--1953.
+
 \bibitem{carion2020end}
 N.~Carion, F.~Massa, G.~Synnaeve, N.~Usunier, A.~Kirillov, and S.~Zagoruyko,
   ``End-to-end object detection with transformers,'' in \emph{European
