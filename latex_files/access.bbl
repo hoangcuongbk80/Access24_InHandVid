@@ -21,6 +21,42 @@
 \providecommand{\BIBdecl}{\relax}
 \BIBdecl
 
+\bibitem{hoang2023grasp}
+D.-C. Hoang, A.-N. Nguyen, V.-D. Vu, D.-Q. Vu, V.-T. Nguyen, T.-U. Nguyen,
+  C.-T. Tran, K.-T. Phan, and N.-T. Ho, ``Grasp configuration synthesis from 3d
+  point clouds with attention mechanism,'' \emph{Journal of Intelligent and
+  Robotic Systems}, vol. 109, no.~3, p.~71, 2023.
+
+\bibitem{hoang2022context}
+D.-C. Hoang, J.~A. Stork, and T.~Stoyanov, ``Context-aware grasp generation in
+  cluttered scenes,'' in \emph{2022 International Conference on Robotics and
+  Automation (ICRA)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2022, pp.
+  1492--1498.
+
+\bibitem{hoang2024collision}
+D.-C. Hoang, A.-N. Nguyen, C.-M. Nguyen, A.-B. Phi, Q.-T. Duong, K.-D. Tran,
+  V.-A. Trinh, V.-D. Tran, H.-N. Pham, P.-Q. Ngo \emph{et~al.},
+  ``Collision-free grasp detection from color and depth images,'' \emph{IEEE
+  Transactions on Artificial Intelligence}, 2024.
+
+\bibitem{hoang2024object}
+D.-C. Hoang, P.~X. Tan, A.-N. Nguyen, D.-Q. Vu, V.-D. Vu, T.-U. Nguyen, Q.-T.
+  Duong, V.-T. Nguyen, N.-A. Hoang, K.-T. Phan \emph{et~al.}, ``Object pose
+  estimation using color images and predicted depth maps,'' \emph{IEEE Access},
+  2024.
+
+\bibitem{hoang2025attention}
+D.-C. Hoang, A.-N. Nguyen, T.-U. Nguyen, N.-A. Hoang, V.-D. Vu, D.-Q. Vu, P.-Q.
+  Ngo, K.-T. Phan, D.-T. Tran, V.-T. Nguyen \emph{et~al.}, ``Attention-based
+  hand pose estimation with voting and dual modalities,'' \emph{Engineering
+  Applications of Artificial Intelligence}, vol. 139, p. 109526, 2025.
+
+\bibitem{tan2024attention}
+P.~X. Tan, D.-C. Hoang, A.-N. Nguyen, V.-T. Nguyen, V.-D. Vu, T.-U. Nguyen,
+  N.-A. Hoang, K.-T. Phan, D.-T. Tran, D.-Q. Vu \emph{et~al.},
+  ``Attention-based grasp detection with monocular depth estimation,''
+  \emph{IEEE Access}, 2024.
+
 \bibitem{marullo20236d}
 G.~Marullo, L.~Tanzi, P.~Piazzolla, and E.~Vezzetti, ``6d object position
   estimation from 2d images: A literature review,'' \emph{Multimedia Tools and
@@ -46,19 +82,41 @@ D.-C. Hoang, A.-N. Nguyen, V.-D. Vu, T.-U. Nguyen, D.-Q. Vu, P.-Q. Ngo, N.-A.
 
 \bibitem{castro2023crt}
 P.~Castro and T.-K. Kim, ``Crt-6d: Fast 6d object pose estimation with cascaded
-  refinement transformers,'' in \emph{Proc. IEEE/CVF Conf. Comput. Vis. Pattern
-  Recognit.}, 2023, pp. 5746--5755.
+  refinement transformers,'' in \emph{Proceedings of the IEEE/CVF Winter
+  Conference on Applications of Computer Vision}, 2023, pp. 5746--5755.
 
 \bibitem{peng2019pvnet}
 S.~Peng, Y.~Liu, Q.~Huang, X.~Zhou, and H.~Bao, ``Pvnet: Pixel-wise voting
   network for 6dof pose estimation,'' in \emph{Proceedings of the IEEE/CVF
   International Conference on Computer Vision}, 2019, pp. 4561--4570.
 
+\bibitem{hoang2022voting}
+D.-C. Hoang, J.~A. Stork, and T.~Stoyanov, ``Voting and attention-based pose
+  relation learning for object pose estimation from 3d point clouds,''
+  \emph{IEEE Robotics and Automation Letters}, vol.~7, no.~4, pp. 8980--8987,
+  2022.
+
+\bibitem{vu2024occlusion}
+V.-D. Vu, D.-D. Hoang, P.~X. Tan, V.-T. Nguyen, T.-U. Nguyen, N.-A. Hoang,
+  K.-T. Phan, D.-T. Tran, D.-Q. Vu, P.-Q. Ngo \emph{et~al.}, ``Occlusion-robust
+  pallet pose estimation for warehouse automation,'' \emph{IEEE Access}, 2024.
+
+\bibitem{chen2016innovative}
+L.-C. Chen, D.-C. Hoang, H.-I. Lin, and T.-H. Nguyen, ``Innovative methodology
+  for multi-view point cloud registration in robotic 3d object scanning and
+  reconstruction,'' \emph{Applied Sciences}, vol.~6, no.~5, p. 132, 2016.
+
 \bibitem{chao2021dexycb}
 Y.-W. Chao, W.~Yang, Y.~Xiang, P.~Molchanov, A.~Handa, J.~Tremblay, Y.~S.
   Narang, K.~Van~Wyk, U.~Iqbal, S.~Birchfield \emph{et~al.}, ``Dexycb: A
   benchmark for capturing hand grasping of objects,'' in \emph{Proc. IEEE/CVF
   Conf. Comput. Vis. Pattern Recognit.}, 2021, pp. 9044--9053.
+
+\bibitem{hoang2024multi}
+D.-C. Hoang, P.~X. Tan, A.-N. Nguyen, D.-Q. Vu, V.-D. Vu, T.-U. Nguyen, N.-A.
+  Hoang, K.-T. Phan, D.-T. Tran, V.-T. Nguyen \emph{et~al.}, ``Multi-modal
+  hand-object pose estimation with adaptive fusion and interaction learning,''
+  \emph{IEEE Access}, 2024.
 
 \bibitem{garcia2018first}
 G.~Garcia-Hernando, S.~Yuan, S.~Baek, and T.-K. Kim, ``First-person hand action
@@ -70,10 +128,32 @@ I.~Llop-Harillo, J.~L. Iserte, and A.~Perez-Gonzalez, ``Benchmarking
   anthropomorphic hands through grasping simulations,'' \emph{Journal of
   Computational Design and Engineering}, vol.~9, no.~2, pp. 330--342, 2022.
 
+\bibitem{hoang2016sub}
+D.-C. Hoang, L.-C. Chen, and T.-H. Nguyen, ``Sub-obb based object recognition
+  and localization algorithm using range images,'' \emph{Measurement Science
+  and Technology}, vol.~28, no.~2, p. 025401, 2016.
+
+\bibitem{hoang2020panoptic}
+D.-C. Hoang, A.~J. Lilienthal, and T.~Stoyanov, ``Panoptic 3d mapping and
+  object pose estimation using adaptively weighted semantic information,''
+  \emph{IEEE Robotics and Automation Letters}, vol.~5, no.~2, pp. 1962--1969,
+  2020.
+
 \bibitem{billings2019silhonet}
 G.~Billings and M.~Johnson-Roberson, ``Silhonet: An rgb method for 6d object
   pose estimation,'' \emph{IEEE Robotics and Automation Letters}, vol.~4,
   no.~4, pp. 3727--3734, 2019.
+
+\bibitem{hoang2019object}
+D.-C. Hoang, T.~Stoyanov, and A.~J. Lilienthal, ``Object-rpe: Dense 3d
+  reconstruction and pose estimation with convolutional neural networks for
+  warehouse robots,'' in \emph{2019 European Conference on Mobile Robots
+  (ECMR)}.\hskip 1em plus 0.5em minus 0.4em\relax IEEE, 2019, pp. 1--6.
+
+\bibitem{hoang2020object}
+D.-C. Hoang, A.~J. Lilienthal, and T.~Stoyanov, ``Object-rpe: Dense 3d
+  reconstruction and pose estimation with convolutional neural networks,''
+  \emph{Robotics and Autonomous Systems}, vol. 133, p. 103632, 2020.
 
 \bibitem{doosti2020hope}
 B.~Doosti, S.~Naha, M.~Mirbagheri, and D.~J. Crandall, ``Hope-net: A
