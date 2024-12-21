@@ -1,0 +1,31 @@
+latexdiff -t CFONT v1_Introduction.tex Introduction.tex > diff_Introduction.tex
+latexdiff -t CFONT v1_RelatedWork.tex RelatedWork.tex > diff_RelatedWork.tex
+latexdiff -t CFONT v1_Method.tex Method.tex > diff_Method.tex
+latexdiff -t CFONT v1_Results.tex Results.tex > diff_Results.tex
+latexdiff -t CFONT v1_access.tex access.tex > diff_access.tex
+latexdiff -t CFONT v1_main.tex main.tex > diff_main.tex
+
+Then change diff_main:
+
+
+\DIFdelbegin %DIFDELCMD < \input{old_Introduction} 
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \input{diff_Introduction} 
+\DIFaddend %
+\DIFdelbegin %DIFDELCMD < \input{old_RelatedWork}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \input{diff_RelatedWork}
+\DIFaddend %
+\DIFdelbegin %DIFDELCMD < \input{old_Method}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \input{diff_Method}
+\DIFaddend %
+\DIFdelbegin %DIFDELCMD < \input{old_Results}
+%DIFDELCMD < %%%
+\DIFdelend \DIFaddbegin \input{diff_Results}
+\DIFaddend %
+
+As daleif pointed out in comments, the problem is due to the ulem package used to strike deleted changes in the changes package. 
+It is known to behave weirdly for some commends, among them cite.
+As indicated in the documentation, you have to wrap your cite in a mbox like this:
+As previously observed \deleted{in \mbox{\cite{someref}}, there is no banana here.

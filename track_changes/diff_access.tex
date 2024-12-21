@@ -1,0 +1,209 @@
+\documentclass{ieeeaccess}
+%DIF LATEXDIFF DIFFERENCE FILE
+%DIF DEL v1_access.tex   Wed Dec 18 17:10:40 2024
+%DIF ADD access.tex      Sat Dec 21 11:26:51 2024
+\usepackage{cite}
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{algorithmic}
+\usepackage{graphicx}
+\usepackage{textcomp}
+
+\usepackage[ruled,noend,linesnumbered]{algorithm2e}
+\usepackage{graphicx,color,psfrag}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{bigdelim}
+\usepackage{dsfont}
+\usepackage{color, soul}
+\usepackage{caption}
+\usepackage{subcaption}
+\usepackage{url}
+
+\def\BibTeX{{\rm B\kern-.05em{\sc i\kern-.025em b}\kern-.08em
+    T\kern-.1667em\lower.7ex\hbox{E}\kern-.125emX}}
+%DIF PREAMBLE EXTENSION ADDED BY LATEXDIFF
+%DIF CFONT PREAMBLE %DIF PREAMBLE
+\RequirePackage{color}\definecolor{RED}{rgb}{1,0,0}\definecolor{BLUE}{rgb}{0,0,1} %DIF PREAMBLE
+\DeclareOldFontCommand{\sf}{\normalfont\sffamily}{\mathsf} %DIF PREAMBLE
+\providecommand{\DIFadd}[1]{{\protect\color{blue} \sf #1}} %DIF PREAMBLE
+\providecommand{\DIFdel}[1]{{\protect\color{red} \scriptsize #1}} %DIF PREAMBLE
+%DIF SAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddbegin}{} %DIF PREAMBLE
+\providecommand{\DIFaddend}{} %DIF PREAMBLE
+\providecommand{\DIFdelbegin}{} %DIF PREAMBLE
+\providecommand{\DIFdelend}{} %DIF PREAMBLE
+%DIF FLOATSAFE PREAMBLE %DIF PREAMBLE
+\providecommand{\DIFaddFL}[1]{\DIFadd{#1}} %DIF PREAMBLE
+\providecommand{\DIFdelFL}[1]{\DIFdel{#1}} %DIF PREAMBLE
+\providecommand{\DIFaddbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFaddendFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelbeginFL}{} %DIF PREAMBLE
+\providecommand{\DIFdelendFL}{} %DIF PREAMBLE
+\newcommand{\DIFscaledelfig}{0.5}
+%DIF HIGHLIGHTGRAPHICS PREAMBLE %DIF PREAMBLE
+\RequirePackage{settobox} %DIF PREAMBLE
+\RequirePackage{letltxmacro} %DIF PREAMBLE
+\newsavebox{\DIFdelgraphicsbox} %DIF PREAMBLE
+\newlength{\DIFdelgraphicswidth} %DIF PREAMBLE
+\newlength{\DIFdelgraphicsheight} %DIF PREAMBLE
+% store original definition of \includegraphics %DIF PREAMBLE
+\LetLtxMacro{\DIFOincludegraphics}{\includegraphics} %DIF PREAMBLE
+\newcommand{\DIFaddincludegraphics}[2][]{{\color{blue}\fbox{\DIFOincludegraphics[#1]{#2}}}} %DIF PREAMBLE
+\newcommand{\DIFdelincludegraphics}[2][]{% %DIF PREAMBLE
+\sbox{\DIFdelgraphicsbox}{\DIFOincludegraphics[#1]{#2}}% %DIF PREAMBLE
+\settoboxwidth{\DIFdelgraphicswidth}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\settoboxtotalheight{\DIFdelgraphicsheight}{\DIFdelgraphicsbox} %DIF PREAMBLE
+\scalebox{\DIFscaledelfig}{% %DIF PREAMBLE
+\parbox[b]{\DIFdelgraphicswidth}{\usebox{\DIFdelgraphicsbox}\\[-\baselineskip] \rule{\DIFdelgraphicswidth}{0em}}\llap{\resizebox{\DIFdelgraphicswidth}{\DIFdelgraphicsheight}{% %DIF PREAMBLE
+\setlength{\unitlength}{\DIFdelgraphicswidth}% %DIF PREAMBLE
+\begin{picture}(1,1)% %DIF PREAMBLE
+\thicklines\linethickness{2pt} %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\framebox(1,1){}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,0){\line( 1,1){1}}}% %DIF PREAMBLE
+{\color[rgb]{1,0,0}\put(0,1){\line(1,-1){1}}}% %DIF PREAMBLE
+\end{picture}% %DIF PREAMBLE
+}\hspace*{3pt}}} %DIF PREAMBLE
+} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbegin}{\DIFaddbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddend}{\DIFaddend} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbegin}{\DIFdelbegin} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelend}{\DIFdelend} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbegin}{\DIFOaddbegin \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbegin}{\DIFOdelbegin \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelend}{\DIFOaddend \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddbeginFL}{\DIFaddbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOaddendFL}{\DIFaddendFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelbeginFL}{\DIFdelbeginFL} %DIF PREAMBLE
+\LetLtxMacro{\DIFOdelendFL}{\DIFdelendFL} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddbeginFL}{\DIFOaddbeginFL \let\includegraphics\DIFaddincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFaddendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelbeginFL}{\DIFOdelbeginFL \let\includegraphics\DIFdelincludegraphics} %DIF PREAMBLE
+\DeclareRobustCommand{\DIFdelendFL}{\DIFOaddendFL \let\includegraphics\DIFOincludegraphics} %DIF PREAMBLE
+%DIF END PREAMBLE EXTENSION ADDED BY LATEXDIFF
+
+\begin{document}
+\history{Date of publication xxxx 00, 0000, date of current version xxxx 00, 0000.}
+\doi{10.1109/ACCESS.20xx.0000000}
+
+\title{Visibility Aware In-Hand Object Pose Tracking in Videos with Transformers}
+
+\author{\uppercase{Phan Xuan Tan}\authorrefmark{1},
+\uppercase{Dinh-Cuong Hoang}\authorrefmark{2},
+\uppercase{Eiji Kamioka}\authorrefmark{1},
+\uppercase{Anh-Nhat Nguyen}\authorrefmark{3},
+\uppercase{Duc-Thanh Tran}\authorrefmark{3}
+\uppercase{Van-Hiep Duong}\authorrefmark{3},
+\uppercase{Anh-Truong Mai}\authorrefmark{3},
+\uppercase{Duc-Long Pham}\authorrefmark{3},
+\uppercase{Khanh-Toan Phan}\authorrefmark{3},
+\uppercase{Xuan-Tung Dinh}\authorrefmark{3},
+\uppercase{Tran Thi Thuy Trang}\authorrefmark{3},
+\uppercase{Xuan-Duong Pham}\authorrefmark{3},
+\uppercase{Nhat-Linh Nguyen}\authorrefmark{3},
+\DIFaddbegin \uppercase{Thu-Uyen Nguyen}\authorrefmark{3}\DIFadd{,
+}\DIFaddend \uppercase{Viet-Anh Trinh}\authorrefmark{2},
+\uppercase{Khanh-Duong Tran}\authorrefmark{2}, and
+\uppercase{Son-Anh Bui}\authorrefmark{2}}
+
+\address[1]{College of Engineering, Shibaura Institute of Technology, Tokyo 135-8548, Japan}
+\address[2]{Greenwich Vietnam, FPT University, Hanoi, 10000, Vietnam}
+\address[3]{IT Department, FPT University, Hanoi, 10000, Vietnam}
+
+%\tfootnote{This paragraph of the first footnote will contain support
+%information, including sponsor and financial support acknowledgment. For
+%example, ``This work was supported in part by the U.S. Department of
+%Commerce under Grant BS123456.''}
+
+\markboth
+{P. X. Tan \headeretal: In-Hand Object Pose Tracking}
+{P. X. Tan \headeretal: In-Hand Object Pose Tracking}
+
+\corresp{Corresponding author: Dinh-Cuong Hoang (e-mail: cuonghd12@fe.edu.vn).}
+
+
+\begin{abstract}
+
+In-hand object pose estimation is essential in various engineering applications, such as quality inspection, reverse engineering, and automated manufacturing processes. However, achieving accurate pose estimation becomes difficult when objects are heavily occluded by the hand or blurred due to motion. To address these challenges, we propose a novel framework that leverages the power of transformers for spatial-temporal reasoning across video sequences. Our approach utilizes transformers to capture both spatial relationships within each frame and temporal dependencies across consecutive frames, allowing the model to aggregate information over time and improve pose predictions. A key innovation of our framework is the introduction of a visibility-aware module, which dynamically adjusts pose estimates based on the object's visibility. This module utilizes temporally-aware features extracted by the transformers, allowing the model to aggregate pose information across multiple frames. By integrating this aggregated information, the model can maintain high accuracy even when portions of the object are not visible in certain frames. This capability is particularly crucial in dynamic environments where the object's appearance can change rapidly due to hand movements or interactions with other objects. Extensive experiments demonstrate that our method significantly outperforms state-of-the-art techniques, achieving a 6\% improvement in overall accuracy and over 11\% better performance in handling occlusions.
+
+\end{abstract}
+
+\begin{keywords}
+Pose estimation, robot vision systems , intelligent systems,   deep learning, supervised learning, machine vision.
+\end{keywords}
+
+\titlepgskip=-21pt
+
+\maketitle
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\input{diff_Introduction} 
+%
+\input{diff_RelatedWork}
+%
+\input{diff_Method}
+%
+\input{diff_Results}
+%
+\bibliographystyle{IEEEtran}
+\bibliography{References}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{authors/prof_Tan}}]{Phan Xuan Tan} (Member, IEEE) received the B.E. degree in Electrical-Electronic Engineering from Military Technical Academy, Vietnam, M.E. degree in Computer and Communication Engineering from Hanoi University of Science and Technology, Vietnam and Ph.D. degree in Functional Control Systems from Shibaura Institute of Technology, Japan. He is currently an Associate Professor at Shibaura Institute of Technology. His current research interests include computer vision, deep learning and image processing.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{authors/DinhCuong}}]{Dinh-Cuong Hoang} received his Ph.D. degree in computer science from Orebro University, Sweden (2021), and is currently a lecturer at FPT University, Greenwich Vietnam. His research interests lie at the intersection of computer vision, robotics, and machine learning. He is particularly interested in topics involving autonomy for robots, with a focus on perception algorithms.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{authors/Eiji_Kamioka}}]{Eiji Kamioka} (Member, IEEE) received the B.S., M.S., and D.S. degrees in physics from Aoyama Gakuin University. He is a Professor with the Shibaura Institute of Technology (SIT). Before joining the SIT, he was working with the SHARP Communication Laboratory, Institute of Space and Astronautical Science (ISAS), as a JPSP Research Fellow, and the National Institute of Informatics (NII) as an Assistant Professor. His current research interests encompass mobile multimedia communications and ubiquitous computing.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{authors/NguyenAnhNhat}}]{Anh-Nhat Nguyen}  is currently a lecturer at FPT University, Vietnam. He received his B.S. and M.S. degrees in Computer Science from Duy Tan University, Da Nang, Vietnam, in 2012 and from Huazhong University of Science and Technology (HUST), China, in 2018, respectively. His research interests include image processing, information security, physical layer secrecy, radio-frequency energy harvesting, and wireless sensor networks.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{authors/TranDucThanh}}]{Duc-Thanh Tran} is pursuing a B.S. degree in Artificial Intelligence at FPT University, Hanoi, Vietnam, with a primary focus on research in the field of computer vision.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{authors/DuongVanHiep}}]{Van-Hiep Duong} is pursuing a B.S. degree in Artificial Intelligence at FPT University, Hanoi, Vietnam, with a primary focus on research in the field of computer vision.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{authors/MaiAnhTruong}}]{Anh-Truong Mai} is pursuing a B.S. degree in Artificial Intelligence at FPT University, Hanoi, Vietnam, with a primary focus on research in the field of computer vision.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{authors/PhamDucLong}}]{Duc-Long Pham} is pursuing a B.S. degree in Artificial Intelligence at FPT University, Hanoi, Vietnam, with a primary focus on research in the field of computer vision.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{authors/PhanKhanhToan}}]{Khanh-Toan Phan} is pursuing a B.S. degree in Artificial Intelligence at FPT University, Hanoi, Vietnam, with a primary focus on research in the field of computer vision.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{authors/DuongVanHiep}}]{Van-Hiep Duong} is pursuing a B.S. degree in Artificial Intelligence at FPT University, Hanoi, Vietnam, with a primary focus on research in the field of computer vision.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{authors/DinhXuanTung}}]{Xuan-Tung Dinh} is pursuing a B.S. degree in Artificial Intelligence at FPT University, Hanoi, Vietnam, with a primary focus on research in the field of computer vision.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{authors/TranThiThuyTrang}}]{TranThiThuyTrang} is pursuing a B.S. degree in Information Technology at FPT University, Hanoi, Vietnam.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{authors/PhamXuanDuong}}]{Xuan-Duong Pham} is pursuing a B.S. degree in Information Technology at FPT University, Hanoi, Vietnam.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{authors/NguyenNhatLinh}}]{Nhat-Linh Nguyen} is pursuing a B.S. degree in Information Technology at FPT University, Hanoi, Vietnam\DIFaddbegin \DIFadd{.
+}\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{authors/ThuUyenNguyen}}]{\DIFadd{Thu-Uyen Nguyen}} \DIFadd{is pursuing a B.S. degree in Artificial Intelligence at FPT University, Hanoi, Vietnam, with a primary focus on research in the field of computer vision}\DIFaddend .
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{authors/TrinhVietAnh}}]{Viet-Anh Trinh} is pursuing a B.S. degree in Information Technology at Greenwich Vietnam, FPT University, Hanoi, Vietnam.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{authors/TranKhanhDuong}}]{Khanh-Duong Tran} is pursuing a B.S. degree in Information Technology at Greenwich Vietnam, FPT University, Hanoi, Vietnam.
+\end{IEEEbiography}
+
+\begin{IEEEbiography}[{\includegraphics[width=1in,height=1.25in,clip,keepaspectratio]{authors/BuiSonAnh}}]{Son-Anh Bui} is pursuing a B.S. degree in Information Technology at Greenwich Vietnam, FPT University, Hanoi, Vietnam.
+\end{IEEEbiography}
+
+\EOD
+
+\end{document}
