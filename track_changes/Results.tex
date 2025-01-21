@@ -3,6 +3,27 @@
 
 In this section, we provide a detailed overview of the three publicly available datasets utilized in our experiments: DexYCB \cite{chao2021dexycb}, FPHAB \cite{garcia2018first}, and HO-3D \cite{hampali2020honnotate}. Each of these datasets presents unique challenges and characteristics that are essential for evaluating the robustness and accuracy of in-hand object pose tracking methods. We benchmark our approach against state-of-the-art methods across various metrics, including Average Precision (AP) and Area Under the Curve (AUC), showing that our model consistently achieves higher accuracy, particularly in challenging scenarios involving heavy occlusions and rapid hand movements.
 
+%-------------------------------------------------------
+\begin{figure}[h!]
+    \begin{subfigure}[b]{0.32\linewidth}
+        \includegraphics[width=0.98\linewidth]{figs/20020_rgb}
+        \caption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\linewidth}
+        \includegraphics[width=0.98\linewidth]{figs/20020_withhand}
+        \caption{}
+    \end{subfigure}
+    \begin{subfigure}[b]{0.32\linewidth}
+        \includegraphics[width=0.98\linewidth]{figs/20020_nohand}
+        \caption{}
+    \end{subfigure}
+    
+    \caption{Illustration of the ground truth visibility score computation process. (a) The input RGB image. (b) The projected 2D object mask overlaid with the hand mask, showing the occluded regions caused by the hand. (c) The projected 2D object mask without considering the hand, representing the total object pixels. The visibility score is computed as the ratio of visible object pixels in (b) to the total object pixels in (c).}
+
+    \label{fig:compute_visibility_score}
+\end{figure}
+%-------------------------------------------------------
+
 \subsection{Datasets}
 
 \textbf{DexYCB Dataset} \cite{chao2021dexycb}. The DexYCB dataset is highly suitable for evaluating hand-held object pose tracking in videos due to its comprehensive set of annotated hand-object interactions. The dataset includes over 582 video sequences capturing the dynamic manipulation of 20 different objects from the YCB dataset by 10 subjects. Each sequence provides 6D object poses, 3D hand poses, and RGB-D data, which are crucial for testing the robustness and accuracy of tracking algorithms in real-world conditions. The variety of objects, coupled with naturalistic hand movements, makes DexYCB an ideal benchmark for assessing how well a model can maintain accurate pose estimates over time, particularly in scenarios involving rapid hand movements and frequent occlusions. To prepare the dataset, we follow the benchmark setup $S0$ (default) as defined in \cite{chao2021dexycb}. The train split contains sequences from all 10 subjects, all 8 camera views, and all 20 grasped objects. We ensure that no sequences are shared between the training, validation, and test splits. Images are resized to $256 \times 256$ pixels, and data augmentation techniques, including random rotation, scaling, and brightness adjustments, are applied during training to enhance model generalization. 
@@ -10,6 +31,8 @@ In this section, we provide a detailed overview of the three publicly available 
 \noindent \textbf{FPHAB Dataset} \cite{garcia2018first}. The First-Person Hand Action Benchmark (FPHAB) dataset is particularly relevant for evaluating pose tracking in first-person view scenarios. It offers 1175 RGB-D video sequences across 45 different action classes, all annotated with 3D hand poses. This dataset is valuable for testing hand-held object pose tracking models because the egocentric viewpoint introduces challenges such as motion blur, self-occlusion, and varying lighting conditions, which are common in real-world applications. By providing a diverse set of actions and interactions, FPHAB enables the assessment of a model's ability to track objects consistently despite the inherent complexities of first-person perspectives. In our setup, the dataset is preprocessed by resizing images to $256 \times 256$ pixels. We split the dataset into approximately 70,000 frames for training and 30,000 frames for testing. Data augmentation, including random flipping, cropping, and color jitter, is applied to the training set. To evaluate the model's robustness to occlusions, more than 70\% of the test set images involve occlusions, with at least 50\% of those under heavy occlusion.
 
 \noindent \textbf{HO-3D Dataset} \cite{hampali2020honnotate}. This dataset is specifically designed to evaluate 3D hand-object pose estimation, making it an excellent benchmark for hand-held object pose tracking in videos. With over 80,000 annotated frames, this dataset captures intricate hand-object interactions, often under challenging conditions like severe occlusions and complex background scenes. The sequences in HO-3D are recorded in real-world environments, providing a realistic testbed for assessing the effectiveness of pose tracking algorithms. The dataset's emphasis on naturalistic hand movements and object manipulation in cluttered environments is critical for evaluating how well a model can maintain accurate pose estimates across frames when faced with partial or full occlusions. We preprocess the dataset by resizing all images to $256 \times 256$ pixels and applying data augmentation such as random rotation, scaling, and brightness adjustments to enhance diversity in the training data. The dataset is split into approximately 65,000 frames for training and 10,000 frames for testing, with over 70\% of the test set images involving occlusions and at least 50\% of those under heavy occlusion.
+
+\noindent \textbf{Ground Truth Visibility Score Computation.} For the visibility-aware module, we derived ground truth visibility scores using the annotated object and hand poses available in the datasets, along with the provided camera calibration parameters. Specifically, we projected the 3D object and hand models into the 2D image plane to generate binary masks for both the object and the hand in each frame. The visibility score for each frame was calculated as the ratio of visible object pixels (after accounting for hand occlusion) to the total number of object pixels. To compute the number of visible object pixels, we first counted the total pixels in the object mask without considering hand occlusion. Next, we overlaid the hand mask onto the object mask to determine the number of object pixels that remained visible. These visibility scores serve as the ground truth for training the visibility-aware module using the binary cross-entropy loss. This process ensures reliable and accurate visibility annotations that align with the dynamic interactions captured in the datasets. An illustration of this computation process is shown in Figure~\ref{fig:compute_visibility_score}.
 
 \subsection{Implementation Details}
 

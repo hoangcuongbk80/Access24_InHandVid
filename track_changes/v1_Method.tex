@@ -25,77 +25,73 @@ The spatial transformer decoder takes a learnable query vector $\mathbf{Q} \in \
 
 Relying solely on single images for hand-held object pose estimation is often insufficient due to several challenges. One issue is the variability in the object's visual appearance over time, which can lead to inconsistent predictions from image-based models. Additionally, the object is frequently occluded by the hand or itself during interaction, making it difficult to estimate its pose accurately when only a portion of the object is visible. Videos, however, offer the advantage of capturing different views and movements of the object, which can reveal parts that might be occluded or blurred in a single frame. This advantage motivates the use of a transformer encoder to model feature interactions along the temporal dimension. Unlike traditional recurrent architectures that process frames sequentially, the transformer's self-attention mechanism allows each frame to leverage information from all other frames directly, regardless of their position in the sequence \cite{vaswani2017attention}. This approach enables the model to capture long-range temporal dependencies more effectively. Similar to the spatial transformer encoder, the temporal transformer encoder processes the sequence of features $\lbrace\mathcal{F}^{se}_t\rbrace_{t=1}^{T}$, which are enhanced by the spatial transformer, and outputs a new set of latent vectors $\lbrace\mathcal{F}^{t}_t\rbrace_{t=1}^{T}$. Given $\mathcal{F}^t_t$, an MLP (Multi-Layer Perceptron) serves as the pose regression network, processing these features to predict the initial object pose parameters $\hat{\mathbf{P}}_t$. By incorporating information across multiple frames, the model can more accurately predict the object's pose, even in cases where individual frames are challenging to interpret due to rapid motion. 
 
-\subsection{Visibility-aware Object Pose Estimation under occlusions}
+\subsection{Visibility-Aware Object Pose Estimation Under Occlusions}
 
-Our network with spatial and temporal transformers recovers more accurate object pose. However, the object pose prediction under very heavy occlusions remains challenging because no image evidence from single frame is available for accurate prediction. Our key idea is to use the temporally-aware features $\mathcal{F}^t_t$ of current occluded frame and object pose from other visible frames to predict the object of occluded frames. To this end, we first predict object visibility scores in each image, which are then leveraged together with the object evidence from neighbouring frames to predict the object poses of the occluded frames.
+Our proposed framework leverages spatial and temporal transformers to improve object pose estimation accuracy. However, predicting object poses under heavy occlusion remains particularly challenging due to the lack of sufficient image evidence within a single frame. To address this issue, we propose a novel approach that combines temporally-aware features, $\mathcal{F}^t_t$, from the current occluded frame with object pose information from other visible frames to predict the pose of the occluded object. This is achieved by first estimating visibility scores for each frame, which are subsequently used to guide the aggregation of pose evidence from neighboring visible frames.
 
-\subsubsection{Visibility Estimation.}
+\subsubsection{Visibility Estimation}
 
-We introduce a visibility score $v_t \in [0, 1]$ for each frame $t$, representing the extent to which the object is visible. This score is crucial for identifying frames where the object is heavily occluded by the hand or other objects. The visibility score is predicted using a visibility decoder $f_{vis}(\cdot)$, which operates on the temporally-aware features $\mathcal{F}^t_t$. The visibility decoder consists of a series of fully connected layers that map the high-dimensional features $\mathcal{F}^t_t$ to a scalar visibility score. The final layer applies a sigmoid activation function to ensure that the score lies within the range $[0, 1]$:
+We introduce a visibility score $v_t \in [0, 1]$ for each frame $t$, which quantifies the visibility of the object in that frame. This score is crucial for identifying heavily occluded frames where direct pose estimation is unreliable. The visibility score is predicted using a visibility decoder $f_{vis}(\cdot)$, which operates on temporally-aware features $\mathcal{F}^t_t$. The decoder consists of fully connected layers, culminating in a sigmoid activation function to ensure outputs lie within the range $[0, 1]$:
 
 \begin{equation}
 v_t = \sigma(f_{vis}(\mathcal{F}^t_t)),
 \end{equation}
 
-\noindent where $\sigma(\cdot)$ denotes the sigmoid function. The visibility score $v_t$ effectively captures the confidence level of the object being visible in frame $t$.  For each frame $t$ in the dataset, let $O$ represent the set of all annotated object pixels, and let $O_t$ represent the subset of those pixels that remain visible in frame $t$. The ground truth visibility score $v_t$ is computed as:
+\noindent where $\sigma(\cdot)$ denotes the sigmoid function. The visibility score $v_t$ represents the confidence level of object visibility in frame $t$. For training, the ground truth visibility score $v_t$ is computed as the fraction of visible object pixels in frame $t$, defined as:
 
 \begin{equation}
-v_t = \frac{|O_t|}{|O|}.
+v_t = \frac{|O_t|}{|O|},
 \end{equation}
 
-\noindent To train the visibility estimation network, we define a loss function that measures the difference between the predicted visibility score $v_t$ and the ground truth visibility score $v_t$. We use the Binary Cross Entropy (BCE) loss function, which is commonly used for binary classification tasks and is suitable for training models to output values in the range $[0, 1]$. The BCE loss for the visibility estimation can be expressed as:
+\noindent where $O$ is the total set of annotated object pixels, and $O_t$ represents the subset of pixels visible in frame $t$. The visibility estimation network is trained using the Binary Cross Entropy (BCE) loss, which measures the difference between predicted visibility scores $\hat{v}_t$ and ground truth scores $v_t$:
 
 \begin{equation}
 \mathcal{L}_{vis} = - \frac{1}{N} \sum_{t=1}^{N} \left( v_t \log(\hat{v}_t) + (1 - v_t) \log(1 - \hat{v}_t) \right),
 \end{equation}
 
-\noindent where:
-\begin{itemize}
-    \item $N$ is the total number of frames in the dataset.
-    \item $\hat{v}_t$ is the predicted visibility score for frame $t$.
-    \item $v_t$ is the ground truth visibility score for frame $t$.
-    \item The terms $v_t \log(\hat{v}_t)$ and $(1 - v_t) \log(1 - \hat{v}_t)$ penalize the model for incorrect predictions by comparing the predicted scores against the ground truth.
-\end{itemize}
+\noindent where $N$ is the total number of frames in the dataset. This loss function penalizes incorrect predictions while ensuring the model outputs confidence values that align with ground truth visibility.
 
-\subsubsection{Object Pose Prediction Under Heavy Occlusion.}
+\subsubsection{Object Pose Prediction Under Heavy Occlusion}
 
-Our objective is to accurately predict the object pose for frames where the object is heavily occluded (i.e., frames with a visibility score \( v_i \) smaller than \( \delta = 0.5 \)). We achieve this by employing a Pose Transformer that aggregates temporal information from frames where the object is visible. This aggregated pose information is then combined with the feature vector of the occluded frame to recover the object's pose. For clarity, we will refer to the temporally-aware features of the occluded frames \( \mathcal{F}_t^t \) as \( \mathcal{F}_{occ} \), where \( \mathcal{F}_{occ} \in \mathbb{R}^C \).
+Accurate object pose prediction for heavily occluded frames (visibility score $v_i < \delta$, where $\delta = 0.5$) is achieved by aggregating temporal pose information from visible frames. The Pose Transformer is used to integrate pose embeddings from multiple visible frames, ensuring consistent pose estimation even under occlusions. Temporally-aware features from occluded frames, $\mathcal{F}^t_t$, are denoted as $\mathcal{F}_{occ} \in \mathbb{R}^C$.
 
-\noindent The Pose Transformer aggregates temporal pose information from multiple visible frames, leveraging the consistency across these frames to improve pose estimation under occlusion. Let \(\hat{\mathbf{P}}_t \) represent the pose of the object at time \( t \), where \( t \) corresponds to the visible frames. These poses are first embedded into a higher-dimensional space, forming pose embeddings \( \mathbf{E}_t \in \mathbb{R}^d \), where \( d \) is the dimensionality of the embedding space. These pose embeddings from multiple visible frames, \( \{\mathbf{E}_{t_1}, \mathbf{E}_{t_2}, \dots, \mathbf{E}_{t_n}\} \), are used as input to the Pose Transformer. The transformer employs a multi-head self-attention mechanism, which computes attention scores \( \alpha_{ij} \) between each pair of pose embeddings \( \mathbf{E}_i \) and \( \mathbf{E}_j \) across the visible frames. These attention scores are computed using the equation
+To aggregate pose information, visible-frame poses $\hat{\mathbf{P}}_t$ are embedded into a high-dimensional space, resulting in pose embeddings $\mathbf{E}_t \in \mathbb{R}^d$. These embeddings are processed by the Pose Transformer, which uses a multi-head self-attention mechanism to compute attention scores $\alpha_{ij}$ between embeddings:
 
 \begin{equation}
-    \alpha_{ij} = softmax\left(\frac{\mathbf{Q}_i \cdot \mathbf{K}_j^T}{\sqrt{d_k}}\right),
+\alpha_{ij} = \text{softmax}\left(\frac{\mathbf{Q}_i \cdot \mathbf{K}_j^T}{\sqrt{d_k}}\right),
 \end{equation}
 
-\noindent where \( \mathbf{Q}_i = \mathbf{E}_i \mathbf{W}_Q \) and \( \mathbf{K}_j = \mathbf{E}_j \mathbf{W}_K \) are the query and key vectors obtained by projecting the pose embeddings using learnable weight matrices \( \mathbf{W}_Q \in \mathbb{R}^{d \times d_k} \) and \( \mathbf{W}_K \in \mathbb{R}^{d \times d_k} \), with \( d_k \) typically set to \( \frac{d}{num\_heads} \), where \( num\_heads \) is the number of attention heads. The value vectors \( \mathbf{V}_j = \mathbf{E}_j \mathbf{W}_V \) are obtained through another projection matrix \( \mathbf{W}_V \in \mathbb{R}^{d \times d_v} \). The output of the transformer is the aggregated pose feature \( \mathbf{Z}_{agg} \in \mathbb{R}^d \), which integrates temporal information from the visible frames. Once the aggregated pose feature \( \mathbf{Z}_{agg} \) is obtained from the Pose Transformer, it is combined with the feature vector \( \mathcal{F}_{occ} \in \mathbb{R}^C \) of the occluded frame. The feature vector \( \mathcal{F}_{occ} \) is extracted from the temporal transformer, which processes the occluded frame's visual data. To combine these features, a cross-attention mechanism is employed, where the aggregated pose feature \( \mathbf{Z}_{agg} \) serves as the query, and the occluded frame's feature vector \( \mathcal{F}_{occ} \) provides the keys and values. Specifically, the query vector is generated by projecting the aggregated pose feature:
+\noindent where $\mathbf{Q}_i = \mathbf{E}_i \mathbf{W}_Q$, $\mathbf{K}_j = \mathbf{E}_j \mathbf{W}_K$, and $\mathbf{V}_j = \mathbf{E}_j \mathbf{W}_V$ are query, key, and value vectors, respectively. These are obtained using learnable weight matrices $\mathbf{W}_Q, \mathbf{W}_K, \mathbf{W}_V \in \mathbb{R}^{d \times d_k}$, and $d_k = d / \text{num\_heads}$.
+
+The transformer outputs an aggregated pose feature $\mathbf{Z}_{agg} \in \mathbb{R}^d$, which integrates temporal information from the visible frames. This feature is combined with the occluded frame's feature vector $\mathcal{F}_{occ}$ through a cross-attention mechanism, where $\mathbf{Z}_{agg}$ serves as the query and $\mathcal{F}_{occ}$ provides the keys and values. Specifically, the query is:
 
 \begin{equation}
-    \mathbf{Q}_{agg} = \mathbf{Z}_{agg} \mathbf{W}_Q' \in \mathbb{R}^{d_q},
+\mathbf{Q}_{agg} = \mathbf{Z}_{agg} \mathbf{W}_Q' \in \mathbb{R}^{d_q},
 \end{equation}
 
-\noindent where \( \mathbf{W}_Q' \in \mathbb{R}^{d \times d_q} \) is a learnable weight matrix, and \( d_q \) is the dimensionality of the query vector. The keys and values are obtained by projecting the feature vector \( \mathcal{F}_{occ} \):
+\noindent while keys and values are obtained as:
 
 \begin{equation}
-    \mathbf{K}_{occ} = \mathcal{F}_{occ} \mathbf{W}_K' \in \mathbb{R}^{d_k},
+\mathbf{K}_{occ} = \mathcal{F}_{occ} \mathbf{W}_K' \in \mathbb{R}^{d_k},
 \end{equation}
 
 \begin{equation}
-    \mathbf{V}_{occ} = \mathcal{F}_{occ} \mathbf{W}_V' \in \mathbb{R}^{d_v},
+\mathbf{V}_{occ} = \mathcal{F}_{occ} \mathbf{W}_V' \in \mathbb{R}^{d_v}.
 \end{equation}
 
-\noindent where \( \mathbf{W}_K' \in \mathbb{R}^{C \times d_k} \) and \( \mathbf{W}_V' \in \mathbb{R}^{C \times d_v} \) are learnable weight matrices for the keys and values, respectively. The query \( \mathbf{Q}_{agg} \) then attends to the keys \( \mathbf{K}_{occ} \) to compute the attention weights:
+\noindent The cross-attention weights are computed as:
 
 \begin{equation}
-    \beta_{ij} = softmax\left(\frac{\mathbf{Q}_{agg} \cdot \mathbf{K}_{occ}^T}{\sqrt{d_k}}\right),
+\beta_{ij} = \text{softmax}\left(\frac{\mathbf{Q}_{agg} \cdot \mathbf{K}_{occ}^T}{\sqrt{d_k}}\right),
 \end{equation}
 
-\noindent where \( \mathbf{K}_{occ} \) is the key vector from the occluded frame's feature vector. The final fused feature representation is computed as a weighted sum of the value vectors:
+\noindent resulting in the fused feature representation:
 
 \begin{equation}
-   \mathcal{F}_{fused} = \sum_{j=1}^{C} \beta_{ij} \mathbf{V}_{occ} \in \mathbb{R}^{d_v}.
+\mathcal{F}_{fused} = \sum_{j=1}^{C} \beta_{ij} \mathbf{V}_{occ}.
 \end{equation}
 
-\noindent This cross-attention mechanism allows the aggregated pose feature to dynamically interact with the occluded frame's feature vector, guiding the network to focus on the most relevant information for pose estimation. The output \( \mathcal{F}_{fused} \) effectively integrates temporal pose information from the visible frames with the features of the occluded frame, providing a robust foundation for accurate pose prediction under heavy occlusion. Given the enhanced feature, we use an MLP to estimate the final pose parameter $\hat{\mathbf{P}}_{occ}$ for occluded frames.
+\noindent The fused feature $\mathcal{F}_{fused}$ integrates information from both visible and occluded frames, enabling accurate pose predictions under occlusion. Finally, a multi-layer perceptron (MLP) processes $\mathcal{F}_{fused}$ to predict the object's pose $\hat{\mathbf{P}}_{occ}$ for the occluded frame. This approach ensures that the temporal information from visible frames compensates for the lack of visual evidence in heavily occluded frames, resulting in robust and accurate pose estimation.
 
 \subsection{Loss Function}
 

@@ -383,12 +383,6 @@ L.~Wang, S.~Yan, J.~Zhen, Y.~Liu, M.~Zhang, G.~Zhang, and X.~Zhou, ``Deep
 A.~Vaswani, ``Attention is all you need,'' \emph{arXiv preprint
   arXiv:1706.03762}, 2017.
 
-\bibitem{yu2023cattrack}
-S.~Yu, D.-H. Zhai, Y.~Xia, D.~Li, and S.~Zhao, ``Cattrack: Single-stage
-  category-level 6d object pose tracking via convolution and vision
-  transformer,'' \emph{IEEE Transactions on Multimedia}, vol.~26, pp.
-  1665--1680, 2023.
-
 \bibitem{zhou2023deep}
 J.~Zhou, K.~Chen, L.~Xu, Q.~Dou, and J.~Qin, ``Deep fusion transformer network
   with weighted vector-wise keypoints voting for robust 6d object pose
@@ -411,38 +405,11 @@ A.~S. Periyasamy, A.~Amini, V.~Tsaturyan, and S.~Behnke, ``Yolopose v2:
   Understanding and improving transformer-based 6d pose estimation,''
   \emph{Robotics and Autonomous Systems}, vol. 168, p. 104490, 2023.
 
-\bibitem{amini2022yolopose}
-A.~Amini, A.~Selvam~Periyasamy, and S.~Behnke, ``Yolopose: Transformer-based
-  multi-object 6d pose estimation using keypoint regression,'' in
-  \emph{International Conference on Intelligent Autonomous Systems}.\hskip 1em
-  plus 0.5em minus 0.4em\relax Springer, 2022, pp. 392--406.
-
-\bibitem{wen2024foundationpose}
-B.~Wen, W.~Yang, J.~Kautz, and S.~Birchfield, ``Foundationpose: Unified 6d pose
-  estimation and tracking of novel objects,'' in \emph{Proceedings of the
-  IEEE/CVF Conference on Computer Vision and Pattern Recognition}, 2024, pp.
-  17\,868--17\,879.
-
-\bibitem{periyasamy2024motpose}
-A.~S. Periyasamy and S.~Behnke, ``Motpose: Multi-object 6d pose estimation for
-  dynamic video sequences using attention-based temporal fusion,'' \emph{arXiv
-  preprint arXiv:2403.09309}, 2024.
-
-\bibitem{li2024efficient}
-R.~Li, Q.~Li, S.~Yang, X.~Zeng, and A.~Yan, ``An efficient and accurate 2d
-  human pose estimation method using vttranspose network,'' \emph{Scientific
-  Reports}, vol.~14, no.~1, p. 7608, 2024.
-
 \bibitem{liu2021swin}
 Z.~Liu, Y.~Lin, Y.~Cao, H.~Hu, Y.~Wei, Z.~Zhang, S.~Lin, and B.~Guo, ``Swin
   transformer: Hierarchical vision transformer using shifted windows,'' in
   \emph{Proceedings of the IEEE/CVF international conference on computer
   vision}, 2021, pp. 10\,012--10\,022.
-
-\bibitem{li2021pose}
-K.~Li, S.~Wang, X.~Zhang, Y.~Xu, W.~Xu, and Z.~Tu, ``Pose recognition with
-  cascade transformers,'' in \emph{Proceedings of the IEEE/CVF conference on
-  computer vision and pattern recognition}, 2021, pp. 1944--1953.
 
 \bibitem{gao2023visfusion}
 H.~Gao, W.~Mao, and M.~Liu, ``Visfusion: Visibility-aware online 3d scene
@@ -493,11 +460,6 @@ K.~He, G.~Gkioxari, P.~Doll{\'a}r, and R.~Girshick, ``Mask r-cnn,'' in
   \emph{Proceedings of the IEEE international conference on computer vision},
   2017, pp. 2961--2969.
 
-\bibitem{castro2023crt}
-P.~Castro and T.-K. Kim, ``Crt-6d: Fast 6d object pose estimation with cascaded
-  refinement transformers,'' in \emph{Proceedings of the IEEE/CVF Winter
-  Conference on Applications of Computer Vision}, 2023, pp. 5746--5755.
-
 \bibitem{hinterstoisser2012model}
 S.~Hinterstoisser, V.~Lepetit, S.~Ilic, S.~Holzer, G.~Bradski, K.~Konolige, and
   N.~Navab, ``Model based training, detection and pose estimation of
@@ -509,6 +471,11 @@ S.~Hinterstoisser, V.~Lepetit, S.~Ilic, S.~Holzer, G.~Bradski, K.~Konolige, and
 R.~Br{\'e}gier, F.~Devernay, L.~Leyrit, and J.~L. Crowley, ``Symmetry aware
   evaluation of 3d object detection and pose estimation in scenes of many parts
   in bulk,'' in \emph{Int. Conf. Comput. Vis. Worksh.}, 2017, pp. 2209--2218.
+
+\bibitem{castro2023crt}
+P.~Castro and T.-K. Kim, ``Crt-6d: Fast 6d object pose estimation with cascaded
+  refinement transformers,'' in \emph{Proceedings of the IEEE/CVF Winter
+  Conference on Applications of Computer Vision}, 2023, pp. 5746--5755.
 
 \bibitem{he2021ffb6d}
 Y.~He, H.~Huang, H.~Fan, Q.~Chen, and J.~Sun, ``Ffb6d: A full flow

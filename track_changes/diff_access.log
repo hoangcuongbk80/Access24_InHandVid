@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  21 DEC 2024 11:41
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Debian) (preloaded format=pdflatex 2023.5.31)  21 JAN 2025 22:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -753,10 +753,10 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[3]
+[3]) (./diff_Method.tex
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 24.
+Package pdftex.def Info: notaglinelogo.png  used on input line 1.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -774,18 +774,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [4]
-Underfull \hbox (badness 2503) in paragraph at lines 25--27
-[]\T1/times/n/n/7 Building on these ad-vance-ments, our con-tri-bu-tion specif-
-i-cally ad-dresses the
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--27
-\T1/times/n/n/7 chal-lenges of in-hand ob-ject pose track-ing, where [][]\T1/fo
-rmata/m/n/10 While ex-ist-ing
- []
-
-) (./diff_Method.tex
 <figs/overview.png, id=34, 845.40843pt x 396.7322pt>
 File: figs/overview.png Graphic file (type png)
 <use figs/overview.png>
@@ -797,7 +785,7 @@ LaTeX Warning: `!h' float specifier changed to `!ht'.
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 23.
+Package pdftex.def Info: notaglinelogo.png  used on input line 27.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -815,9 +803,13 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [5]
+Underfull \hbox (badness 1490) in paragraph at lines 30--31
+\T1/times/n/n/10 Our pro-posed frame-work lever-ages spa-tial and tem-po-ral
+ []
+
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 31.
+Package pdftex.def Info: notaglinelogo.png  used on input line 50.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -835,20 +827,9 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [6 <./figs/overview.png>]
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 53.
-
-
-Underfull \hbox (badness 6001) in paragraph at lines 86--89
-[]\T1/formata/m/n/10 To ag-gre-gate pose in-for-ma-tion, visible-frame
- []
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 91.
-
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 106.
+Package pdftex.def Info: notaglinelogo.png  used on input line 122.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -865,27 +846,44 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[7]
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 112.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 118.
-
-
-
-LaTeX Font Warning: Command \scriptsize invalid in math mode on input line 124.
-
-
-) (./diff_Results.tex
+[7]) (./diff_Results.tex
 Underfull \hbox (badness 2126) in paragraph at lines 4--5
 \T1/times/n/n/10 In this sec-tion, we pro-vide a de-tailed overview of the
  []
 
+<figs/20020_rgb.png, id=49, 225.84375pt x 157.58875pt>
+File: figs/20020_rgb.png Graphic file (type png)
+<use figs/20020_rgb.png>
+Package pdftex.def Info: figs/20020_rgb.png  used on input line 9.
+(pdftex.def)             Requested size: 76.10382pt x 53.10335pt.
+
+Overfull \hbox (5.2465pt too wide) in paragraph at lines 9--10
+[][][] 
+ []
+
+<figs/20020_withhand.png, id=50, 225.84375pt x 157.58875pt>
+File: figs/20020_withhand.png Graphic file (type png)
+<use figs/20020_withhand.png>
+Package pdftex.def Info: figs/20020_withhand.png  used on input line 13.
+(pdftex.def)             Requested size: 76.10382pt x 53.10335pt.
+
+Overfull \hbox (5.2465pt too wide) in paragraph at lines 13--14
+[][][] 
+ []
+
+<figs/20020_nohand.png, id=51, 223.83624pt x 158.5925pt>
+File: figs/20020_nohand.png Graphic file (type png)
+<use figs/20020_nohand.png>
+Package pdftex.def Info: figs/20020_nohand.png  used on input line 17.
+(pdftex.def)             Requested size: 76.10382pt x 53.92072pt.
+
+Overfull \hbox (5.2465pt too wide) in paragraph at lines 17--18
+[][][] 
+ []
+
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 10.
+Package pdftex.def Info: notaglinelogo.png  used on input line 35.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -902,19 +900,17 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[8]
-Underfull \hbox (badness 3323) in paragraph at lines 19--19
+[8 <./figs/20020_rgb.png> <./figs/20020_withhand.png> <./figs/20020_nohand.png>
+]
+Underfull \hbox (badness 3323) in paragraph at lines 40--40
 [][][]\T1/times/m/n/8 Our code and other ma-te-ri-als are avail-able at $https 
 : / / github . com /
  []
 
 
-Underfull \hbox (badness 1430) in paragraph at lines 19--20
-\T1/times/n/n/10 Our im-ple-men-ta-tion[] em-ploys ResNet-50 [83] com-bined
+Underfull \hbox (badness 1430) in paragraph at lines 40--41
+\T1/times/n/n/10 Our im-ple-men-ta-tion[] em-ploys ResNet-50 [77] com-bined
  []
-
-
-Underfull \vbox (badness 3907) has occurred while \output is active []
 
 Package epstopdf Info: Source file: <figs/1_rgb.eps>
 (epstopdf)                    date: 2024-10-16 22:05:11
@@ -924,40 +920,35 @@ Package epstopdf Info: Source file: <figs/1_rgb.eps>
 (epstopdf)                    size: 59801 bytes
 (epstopdf)             Command: <repstopdf --outfile=figs/1_rgb-eps-converted-t
 o.pdf figs/1_rgb.eps>
-(epstopdf)             \includegraphics on input line 24.
+(epstopdf)             \includegraphics on input line 45.
 Package epstopdf Info: Output file is already uptodate.
 
 
 pdfTeX warning: pdflatex (file ./figs/1_rgb-eps-converted-to.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/1_rgb-eps-converted-to.pdf, id=60, 766.865pt x 146.5475pt>
+<figs/1_rgb-eps-converted-to.pdf, id=56, 766.865pt x 146.5475pt>
 File: figs/1_rgb-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/1_rgb-eps-converted-to.pdf>
-Package pdftex.def Info: figs/1_rgb-eps-converted-to.pdf  used on input line 24
+Package pdftex.def Info: figs/1_rgb-eps-converted-to.pdf  used on input line 45
 .
 (pdftex.def)             Requested size: 495.01717pt x 94.59953pt.
-<figs/1_1.png, id=61, 1032.85875pt x 344.28625pt>
+<figs/1_1.png, id=57, 1032.85875pt x 344.28625pt>
 File: figs/1_1.png Graphic file (type png)
 <use figs/1_1.png>
-Package pdftex.def Info: figs/1_1.png  used on input line 39.
+Package pdftex.def Info: figs/1_1.png  used on input line 50.
 (pdftex.def)             Requested size: 495.01717pt x 165.00336pt.
-
-Overfull \hbox (37.44131pt too wide) in paragraph at lines 33--40
-[]\T1/times/m/n/7 Ground truth[] [] 
- []
-
-<figs/1_2.png, id=62, 1032.85875pt x 345.29pt>
+<figs/1_2.png, id=58, 1032.85875pt x 345.29pt>
 File: figs/1_2.png Graphic file (type png)
 <use figs/1_2.png>
-Package pdftex.def Info: figs/1_2.png  used on input line 44.
+Package pdftex.def Info: figs/1_2.png  used on input line 55.
 (pdftex.def)             Requested size: 495.01717pt x 165.4844pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--51
+Underfull \hbox (badness 10000) in paragraph at lines 44--58
 []$[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 23--51
+Underfull \hbox (badness 10000) in paragraph at lines 44--58
 []$
  []
 
@@ -975,40 +966,38 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./figs/2_rgb-eps-converted-to.pdf): PDF inclusio
 n: found PDF version <1.7>, but at most version <1.5> allowed
-<figs/2_rgb-eps-converted-to.pdf, id=63, 807.015pt x 159.59625pt>
+<figs/2_rgb-eps-converted-to.pdf, id=59, 807.015pt x 159.59625pt>
 File: figs/2_rgb-eps-converted-to.pdf Graphic file (type pdf)
 <use figs/2_rgb-eps-converted-to.pdf>
 Package pdftex.def Info: figs/2_rgb-eps-converted-to.pdf  used on input line 65
 .
 (pdftex.def)             Requested size: 495.01717pt x 97.8966pt.
-<figs/2_1.png, id=64, 1084.05pt x 368.37625pt>
+<figs/2_1.png, id=60, 1084.05pt x 368.37625pt>
 File: figs/2_1.png Graphic file (type png)
 <use figs/2_1.png>
-Package pdftex.def Info: figs/2_1.png  used on input line 80.
+Package pdftex.def Info: figs/2_1.png  used on input line 70.
 (pdftex.def)             Requested size: 495.01717pt x 168.21289pt.
-
-Overfull \hbox (37.44131pt too wide) in paragraph at lines 74--81
-[]\T1/times/m/n/7 Ground truth[] [] 
- []
-
-<figs/2_2.png, id=65, 1084.05pt x 361.35pt>
+<figs/2_2.png, id=61, 1084.05pt x 361.35pt>
 File: figs/2_2.png Graphic file (type png)
 <use figs/2_2.png>
-Package pdftex.def Info: figs/2_2.png  used on input line 85.
+Package pdftex.def Info: figs/2_2.png  used on input line 75.
 (pdftex.def)             Requested size: 495.01717pt x 165.00447pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--92
+Underfull \hbox (badness 10000) in paragraph at lines 64--78
 []$[]$
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 64--92
+Underfull \hbox (badness 10000) in paragraph at lines 64--78
 []$
  []
 
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 114.
+Package pdftex.def Info: notaglinelogo.png  used on input line 140.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1028,9 +1017,16 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 [9]
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
+
+
+LaTeX Warning: `h' float specifier changed to `ht'.
+
+
+Underfull \vbox (badness 2735) has occurred while \output is active []
+
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 118.
+Package pdftex.def Info: notaglinelogo.png  used on input line 183.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1048,10 +1044,6 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [10 <./figs/1_rgb-eps-converted-to.pdf> <./figs/1_1.png> <./figs/1_2.png>]
-
-LaTeX Warning: `h' float specifier changed to `ht'.
-
-
 Underfull \vbox (badness 10000) has occurred while \output is active []
 
 
@@ -1059,7 +1051,7 @@ Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 161.
+Package pdftex.def Info: notaglinelogo.png  used on input line 183.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1081,22 +1073,19 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 
-LaTeX Warning: `h' float specifier changed to `ht'.
+Underfull \vbox (badness 1087) has occurred while \output is active []
 
 
-Overfull \hbox (3.60243pt too wide) in paragraph at lines 244--245
-\T1/formata/m/n/10 Table 3[] pro-vides a de-tailed eval-u-a-tion of transformer
--
+Underfull \hbox (badness 2213) in paragraph at lines 228--229
+\T1/times/n/n/10 stan-dalone and aug-mented transformer-based ap-proaches
  []
 
 
-Underfull \hbox (badness 1694) in paragraph at lines 247--248
-[]\T1/formata/m/n/10 The transformer-based meth-ods eval-u-ated, in-
- []
+Underfull \vbox (badness 10000) has occurred while \output is active []
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 251.
+Package pdftex.def Info: notaglinelogo.png  used on input line 229.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1114,15 +1103,12 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [12]
-Underfull \vbox (badness 6396) has occurred while \output is active []
-
-
 
 LaTeX Warning: `h' float specifier changed to `ht'.
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 292.
+Package pdftex.def Info: notaglinelogo.png  used on input line 271.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1140,19 +1126,31 @@ Underfull \hbox (badness 10000) has occurred while \output is active
  []
 
 [13]
-Underfull \hbox (badness 1490) in paragraph at lines 298--299
-\T1/formata/m/n/10 sions. While transformer-based ar-chi-tec-tures are
+Underfull \hbox (badness 1874) in paragraph at lines 272--273
+[]\T1/times/n/n/10 To fur-ther en-hance run-time per-for-mance, we pro-pose
  []
 
 
-Underfull \vbox (badness 3098) has occurred while \output is active []
+Underfull \vbox (badness 1342) has occurred while \output is active []
 
 
-Underfull \vbox (badness 10000) has occurred while \output is active []
+Underfull \hbox (badness 2680) in paragraph at lines 280--281
+\T1/times/n/n/10 used in our ex-per-i-ments pro-vide well-annotated frames
+ []
+
+
+Underfull \hbox (badness 1448) in paragraph at lines 280--281
+\T1/times/n/n/10 may in-volve ob-jects or en-vi-ron-ments not rep-re-sented in
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 286--287
+
+ []
 
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 302.
+Package pdftex.def Info: notaglinelogo.png  used on input line 287.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1169,25 +1167,12 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[14]
-Underfull \hbox (badness 1354) in paragraph at lines 306--307
-\T1/formata/m/n/10 sump-tion and slower train-ing times due to the
- []
+[14]) (./diff_access.bbl
+Underfull \vbox (badness 1688) has occurred while \output is active []
 
-
-Underfull \hbox (badness 2443) in paragraph at lines 309--310
-\T1/formata/m/n/10 ap-pli-ca-tions, par-tic-u-larly in resource-constrained
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 317--318
-
- []
-
-) (./diff_access.bbl
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 69.
+Package pdftex.def Info: notaglinelogo.png  used on input line 212.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1214,35 +1199,15 @@ LaTeX Font Warning: Font shape `TS1/times/n/it' undefined
 (Font)              using `TS1/cmr/m/n' instead
 (Font)              for symbol `textregistered' on input line 260.
 
-File: notaglinelogo.png Graphic file (type png)
-<use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 309.
-(pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
-Overfull \hbox (505.12177pt too wide) has occurred while \output is active
-[]
- []
-
-
-Overfull \hbox (505.12177pt too wide) has occurred while \output is active
-[]
- []
-
-
-Underfull \hbox (badness 10000) has occurred while \output is active
-[]
- []
-
-[16]
-Underfull \hbox (badness 4416) in paragraph at lines 464--468
+Underfull \hbox (badness 4416) in paragraph at lines 431--435
 []\T1/times/m/n/7.61 N. Car-ion, F. Massa, G. Syn-naeve, N. Usunier, A. Kir-ill
 ov, and
  []
 
-)
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 153.
+Package pdftex.def Info: notaglinelogo.png  used on input line 457.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1259,8 +1224,8 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[17]
-<authors/prof_Tan.png, id=114, 416.55624pt x 491.8375pt>
+[16])
+<authors/prof_Tan.png, id=107, 416.55624pt x 491.8375pt>
 File: authors/prof_Tan.png Graphic file (type png)
 <use authors/prof_Tan.png>
 Package pdftex.def Info: authors/prof_Tan.png  used on input line 153.
@@ -1269,7 +1234,7 @@ File: authors/prof_Tan.png Graphic file (type png)
 <use authors/prof_Tan.png>
 Package pdftex.def Info: authors/prof_Tan.png  used on input line 153.
 (pdftex.def)             Requested size: 72.26917pt x 85.32986pt.
-<authors/DinhCuong.jpg, id=117, 1300.86pt x 1334.9875pt>
+<authors/DinhCuong.jpg, id=110, 1300.86pt x 1334.9875pt>
 File: authors/DinhCuong.jpg Graphic file (type jpg)
 <use authors/DinhCuong.jpg>
 Package pdftex.def Info: authors/DinhCuong.jpg  used on input line 156.
@@ -1278,7 +1243,7 @@ File: authors/DinhCuong.jpg Graphic file (type jpg)
 <use authors/DinhCuong.jpg>
 Package pdftex.def Info: authors/DinhCuong.jpg  used on input line 156.
 (pdftex.def)             Requested size: 72.25217pt x 74.14767pt.
-<authors/Eiji_Kamioka.PNG, id=120, 369.17924pt x 352.01512pt>
+<authors/Eiji_Kamioka.PNG, id=113, 369.17924pt x 352.01512pt>
 File: authors/Eiji_Kamioka.PNG Graphic file (type png)
 <use authors/Eiji_Kamioka.PNG>
 Package pdftex.def Info: authors/Eiji_Kamioka.PNG  used on input line 159.
@@ -1307,7 +1272,7 @@ Package epstopdf Info: Output file is already uptodate.
 
 pdfTeX warning: pdflatex (file ./authors/NguyenAnhNhat-eps-converted-to.pdf): P
 DF inclusion: found PDF version <1.7>, but at most version <1.5> allowed
-<authors/NguyenAnhNhat-eps-converted-to.pdf, id=123, 118.4425pt x 173.64874pt>
+<authors/NguyenAnhNhat-eps-converted-to.pdf, id=116, 118.4425pt x 173.64874pt>
 File: authors/NguyenAnhNhat-eps-converted-to.pdf Graphic file (type pdf)
 <use authors/NguyenAnhNhat-eps-converted-to.pdf>
 Package pdftex.def Info: authors/NguyenAnhNhat-eps-converted-to.pdf  used on in
@@ -1329,7 +1294,7 @@ File: authors/NguyenAnhNhat-eps-converted-to.pdf Graphic file (type pdf)
 Package pdftex.def Info: authors/NguyenAnhNhat-eps-converted-to.pdf  used on in
 put line 162.
 (pdftex.def)             Requested size: 61.61935pt x 90.34026pt.
-<authors/TranDucThanh.png, id=126, 1724.4425pt x 2740.2375pt>
+<authors/TranDucThanh.png, id=119, 1724.4425pt x 2740.2375pt>
 File: authors/TranDucThanh.png Graphic file (type png)
 <use authors/TranDucThanh.png>
 Package pdftex.def Info: authors/TranDucThanh.png  used on input line 165.
@@ -1338,7 +1303,7 @@ File: authors/TranDucThanh.png Graphic file (type png)
 <use authors/TranDucThanh.png>
 Package pdftex.def Info: authors/TranDucThanh.png  used on input line 165.
 (pdftex.def)             Requested size: 56.83572pt x 90.31522pt.
-<authors/DuongVanHiep.png, id=129, 336.25626pt x 340.27126pt>
+<authors/DuongVanHiep.png, id=122, 336.25626pt x 340.27126pt>
 File: authors/DuongVanHiep.png Graphic file (type png)
 <use authors/DuongVanHiep.png>
 Package pdftex.def Info: authors/DuongVanHiep.png  used on input line 168.
@@ -1347,7 +1312,7 @@ File: authors/DuongVanHiep.png Graphic file (type png)
 <use authors/DuongVanHiep.png>
 Package pdftex.def Info: authors/DuongVanHiep.png  used on input line 168.
 (pdftex.def)             Requested size: 72.26802pt x 73.13092pt.
-<authors/MaiAnhTruong.jpg, id=132, 355.3275pt x 473.77pt>
+<authors/MaiAnhTruong.jpg, id=125, 355.3275pt x 473.77pt>
 File: authors/MaiAnhTruong.jpg Graphic file (type jpg)
 <use authors/MaiAnhTruong.jpg>
 Package pdftex.def Info: authors/MaiAnhTruong.jpg  used on input line 171.
@@ -1356,7 +1321,7 @@ File: authors/MaiAnhTruong.jpg Graphic file (type jpg)
 <use authors/MaiAnhTruong.jpg>
 Package pdftex.def Info: authors/MaiAnhTruong.jpg  used on input line 171.
 (pdftex.def)             Requested size: 67.75148pt x 90.33531pt.
-<authors/PhamDucLong.jpg, id=135, 947.54pt x 1423.3175pt>
+<authors/PhamDucLong.jpg, id=128, 947.54pt x 1423.3175pt>
 File: authors/PhamDucLong.jpg Graphic file (type jpg)
 <use authors/PhamDucLong.jpg>
 Package pdftex.def Info: authors/PhamDucLong.jpg  used on input line 174.
@@ -1365,26 +1330,9 @@ File: authors/PhamDucLong.jpg Graphic file (type jpg)
 <use authors/PhamDucLong.jpg>
 Package pdftex.def Info: authors/PhamDucLong.jpg  used on input line 174.
 (pdftex.def)             Requested size: 60.13197pt x 90.32536pt.
-<authors/PhanKhanhToan.jpg, id=138, 1456.44125pt x 1947.275pt>
-File: authors/PhanKhanhToan.jpg Graphic file (type jpg)
-<use authors/PhanKhanhToan.jpg>
-Package pdftex.def Info: authors/PhanKhanhToan.jpg  used on input line 177.
-(pdftex.def)             Requested size: 67.55936pt x 90.32747pt.
-File: authors/PhanKhanhToan.jpg Graphic file (type jpg)
-<use authors/PhanKhanhToan.jpg>
-Package pdftex.def Info: authors/PhanKhanhToan.jpg  used on input line 177.
-(pdftex.def)             Requested size: 67.55936pt x 90.32747pt.
-File: authors/DuongVanHiep.png Graphic file (type png)
-<use authors/DuongVanHiep.png>
-Package pdftex.def Info: authors/DuongVanHiep.png  used on input line 180.
-(pdftex.def)             Requested size: 72.26802pt x 73.13092pt.
-File: authors/DuongVanHiep.png Graphic file (type png)
-<use authors/DuongVanHiep.png>
-Package pdftex.def Info: authors/DuongVanHiep.png  used on input line 180.
-(pdftex.def)             Requested size: 72.26802pt x 73.13092pt.
 File: notaglinelogo.png Graphic file (type png)
 <use notaglinelogo.png>
-Package pdftex.def Info: notaglinelogo.png  used on input line 183.
+Package pdftex.def Info: notaglinelogo.png  used on input line 177.
 (pdftex.def)             Requested size: 91.32pt x 23.1352pt.
 
 Overfull \hbox (505.12177pt too wide) has occurred while \output is active
@@ -1401,11 +1349,28 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[18 <./authors/prof_Tan.png> <./authors/DinhCuong.jpg> <./authors/Eiji_Kamioka.
+[17 <./authors/prof_Tan.png> <./authors/DinhCuong.jpg> <./authors/Eiji_Kamioka.
 PNG> <./authors/NguyenAnhNhat-eps-converted-to.pdf> <./authors/TranDucThanh.png
 > <./authors/DuongVanHiep.png> <./authors/MaiAnhTruong.jpg> <./authors/PhamDucL
-ong.jpg> <./authors/PhanKhanhToan.jpg>]
-<authors/DinhXuanTung.jpg, id=163, 860.21375pt x 1284.8pt>
+ong.jpg>]
+<authors/PhanKhanhToan.jpg, id=149, 1456.44125pt x 1947.275pt>
+File: authors/PhanKhanhToan.jpg Graphic file (type jpg)
+<use authors/PhanKhanhToan.jpg>
+Package pdftex.def Info: authors/PhanKhanhToan.jpg  used on input line 177.
+(pdftex.def)             Requested size: 67.55936pt x 90.32747pt.
+File: authors/PhanKhanhToan.jpg Graphic file (type jpg)
+<use authors/PhanKhanhToan.jpg>
+Package pdftex.def Info: authors/PhanKhanhToan.jpg  used on input line 177.
+(pdftex.def)             Requested size: 67.55936pt x 90.32747pt.
+File: authors/DuongVanHiep.png Graphic file (type png)
+<use authors/DuongVanHiep.png>
+Package pdftex.def Info: authors/DuongVanHiep.png  used on input line 180.
+(pdftex.def)             Requested size: 72.26802pt x 73.13092pt.
+File: authors/DuongVanHiep.png Graphic file (type png)
+<use authors/DuongVanHiep.png>
+Package pdftex.def Info: authors/DuongVanHiep.png  used on input line 180.
+(pdftex.def)             Requested size: 72.26802pt x 73.13092pt.
+<authors/DinhXuanTung.jpg, id=154, 860.21375pt x 1284.8pt>
 File: authors/DinhXuanTung.jpg Graphic file (type jpg)
 <use authors/DinhXuanTung.jpg>
 Package pdftex.def Info: authors/DinhXuanTung.jpg  used on input line 183.
@@ -1414,7 +1379,7 @@ File: authors/DinhXuanTung.jpg Graphic file (type jpg)
 <use authors/DinhXuanTung.jpg>
 Package pdftex.def Info: authors/DinhXuanTung.jpg  used on input line 183.
 (pdftex.def)             Requested size: 60.48363pt x 90.33728pt.
-<authors/TranThiThuyTrang.jpg, id=166, 850.17625pt x 1284.8pt>
+<authors/TranThiThuyTrang.jpg, id=157, 850.17625pt x 1284.8pt>
 File: authors/TranThiThuyTrang.jpg Graphic file (type jpg)
 <use authors/TranThiThuyTrang.jpg>
 Package pdftex.def Info: authors/TranThiThuyTrang.jpg  used on input line 186.
@@ -1423,7 +1388,7 @@ File: authors/TranThiThuyTrang.jpg Graphic file (type jpg)
 <use authors/TranThiThuyTrang.jpg>
 Package pdftex.def Info: authors/TranThiThuyTrang.jpg  used on input line 186.
 (pdftex.def)             Requested size: 59.77786pt x 90.33728pt.
-<authors/PhamXuanDuong.jpeg, id=169, 3424.795pt x 5139.2pt>
+<authors/PhamXuanDuong.jpeg, id=160, 3424.795pt x 5139.2pt>
 File: authors/PhamXuanDuong.jpeg Graphic file (type jpg)
 <use authors/PhamXuanDuong.jpeg>
 Package pdftex.def Info: authors/PhamXuanDuong.jpeg  used on input line 189.
@@ -1432,7 +1397,7 @@ File: authors/PhamXuanDuong.jpeg Graphic file (type jpg)
 <use authors/PhamXuanDuong.jpeg>
 Package pdftex.def Info: authors/PhamXuanDuong.jpeg  used on input line 189.
 (pdftex.def)             Requested size: 60.20132pt x 90.33728pt.
-<authors/NguyenNhatLinh.jpeg, id=172, 1525.7pt x 2573.615pt>
+<authors/NguyenNhatLinh.jpeg, id=163, 1525.7pt x 2573.615pt>
 File: authors/NguyenNhatLinh.jpeg Graphic file (type jpg)
 <use authors/NguyenNhatLinh.jpeg>
 Package pdftex.def Info: authors/NguyenNhatLinh.jpeg  used on input line 192.
@@ -1441,7 +1406,7 @@ File: authors/NguyenNhatLinh.jpeg Graphic file (type jpg)
 <use authors/NguyenNhatLinh.jpeg>
 Package pdftex.def Info: authors/NguyenNhatLinh.jpeg  used on input line 192.
 (pdftex.def)             Requested size: 53.54463pt x 90.32135pt.
-<authors/ThuUyenNguyen.png, id=175, 474.27188pt x 639.89063pt>
+<authors/ThuUyenNguyen.png, id=166, 474.27188pt x 639.89063pt>
 File: authors/ThuUyenNguyen.png Graphic file (type png)
 <use authors/ThuUyenNguyen.png>
 Package pdftex.def Info: authors/ThuUyenNguyen.png  used on input line 195.
@@ -1450,7 +1415,7 @@ File: authors/ThuUyenNguyen.png Graphic file (type png)
 <use authors/ThuUyenNguyen.png>
 Package pdftex.def Info: authors/ThuUyenNguyen.png  used on input line 195.
 (pdftex.def)             Requested size: 66.95483pt x 90.33589pt.
-<authors/TrinhVietAnh.jpg, id=178, 113.223pt x 169.8345pt>
+<authors/TrinhVietAnh.jpg, id=169, 113.223pt x 169.8345pt>
 File: authors/TrinhVietAnh.jpg Graphic file (type jpg)
 <use authors/TrinhVietAnh.jpg>
 Package pdftex.def Info: authors/TrinhVietAnh.jpg  used on input line 198.
@@ -1459,7 +1424,7 @@ File: authors/TrinhVietAnh.jpg Graphic file (type jpg)
 <use authors/TrinhVietAnh.jpg>
 Package pdftex.def Info: authors/TrinhVietAnh.jpg  used on input line 198.
 (pdftex.def)             Requested size: 60.22557pt x 90.33836pt.
-<authors/TranKhanhDuong.jpg, id=181, 1276.77pt x 1370.87157pt>
+<authors/TranKhanhDuong.jpg, id=172, 1276.77pt x 1370.87157pt>
 File: authors/TranKhanhDuong.jpg Graphic file (type jpg)
 <use authors/TranKhanhDuong.jpg>
 Package pdftex.def Info: authors/TranKhanhDuong.jpg  used on input line 201.
@@ -1473,7 +1438,7 @@ Underfull \hbox (badness 1983) in paragraph at lines 201--202
 \T1/times/n/n/8 gree in In-for-ma-tion Tech-nol-ogy at Green-wich
  []
 
-<authors/BuiSonAnh.jpg, id=184, 602.25pt x 602.25pt>
+<authors/BuiSonAnh.jpg, id=175, 602.25pt x 602.25pt>
 File: authors/BuiSonAnh.jpg Graphic file (type jpg)
 <use authors/BuiSonAnh.jpg>
 Package pdftex.def Info: authors/BuiSonAnh.jpg  used on input line 204.
@@ -1505,46 +1470,39 @@ Underfull \hbox (badness 10000) has occurred while \output is active
 []
  []
 
-[19 <./authors/DinhXuanTung.jpg> <./authors/TranThiThuyTrang.jpg> <./authors/Ph
-amXuanDuong.jpeg> <./authors/NguyenNhatLinh.jpeg> <./authors/ThuUyenNguyen.png>
- <./authors/TrinhVietAnh.jpg> <./authors/TranKhanhDuong.jpg> <./authors/BuiSonA
-nh.jpg>] (./diff_access.aux)
+[18 <./authors/PhanKhanhToan.jpg> <./authors/DinhXuanTung.jpg> <./authors/TranT
+hiThuyTrang.jpg> <./authors/PhamXuanDuong.jpeg> <./authors/NguyenNhatLinh.jpeg>
+ <./authors/ThuUyenNguyen.png> <./authors/TrinhVietAnh.jpg> <./authors/TranKhan
+hDuong.jpg> <./authors/BuiSonAnh.jpg>] (./diff_access.aux)
 
 LaTeX Font Warning: Some font shapes were not available, defaults substituted.
 
  ) 
 Here is how much of TeX's memory you used:
- 7317 strings out of 492982
- 113910 string characters out of 6134896
- 204040 words of memory out of 5000000
- 10676 multiletter control sequences out of 15000+600000
- 91325 words of font info for 150 fonts, out of 8000000 for 9000
+ 7315 strings out of 492982
+ 114019 string characters out of 6134896
+ 200024 words of memory out of 5000000
+ 10673 multiletter control sequences out of 15000+600000
+ 84505 words of font info for 140 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 53i,13n,92p,4101b,500s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 53i,13n,92p,2985b,500s stack positions out of 5000i,500n,10000p,200000b,80000s
 {/usr/share/texmf/fonts/enc/dvips/cm-super/cm-super-ts1.enc}</usr/share/texli
 ve/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/tex
-mf-dist/fonts/type1/public/amsfonts/cm/cmbx7.pfb></usr/share/texlive/texmf-dist
-/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts
-/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1
-/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public
-/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
-ts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cm
-r7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss10.pfb
-></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmss8.pfb></usr/
-share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/
-texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy5.pfb></usr/share/texlive
-/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-
-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb></usr/share/texlive/texmf-dist/fo
-nts/type1/public/amsfonts/symbols/msbm10.pfb></usr/share/texlive/texmf-dist/fon
-ts/type1/public/amsfonts/symbols/msbm7.pfb></usr/share/texmf/fonts/type1/public
-/cm-super/sfrm0800.pfb><./t1-formata-bold.pfb><./t1-formata-condmedium.pfb><./t
-1-formata-medium.pfb><./t1-formata-mediumitalic.pfb><./t1-formata-regular.pfb><
-./t1-giovannistd-bookitalic.pfb><./t1-times-bold.pfb><./t1-times-italic.pfb><./
-t1-times.pfb>
-Output written on diff_access.pdf (19 pages, 14194620 bytes).
+mf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dis
+t/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/font
+s/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1
+/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/
+amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfon
+ts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/c
+msy8.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/symbols/msb
+m10.pfb></usr/share/texmf/fonts/type1/public/cm-super/sfrm0800.pfb><./t1-format
+a-bold.pfb><./t1-formata-condmedium.pfb><./t1-formata-medium.pfb><./t1-formata-
+mediumitalic.pfb><./t1-formata-regular.pfb><./t1-giovannistd-bookitalic.pfb><./
+t1-times-bold.pfb><./t1-times-italic.pfb><./t1-times.pfb>
+Output written on diff_access.pdf (18 pages, 14307094 bytes).
 PDF statistics:
- 282 PDF objects out of 1000 (max. 8388607)
- 150 compressed objects within 2 object streams
+ 253 PDF objects out of 1000 (max. 8388607)
+ 126 compressed objects within 2 object streams
  0 named destinations out of 1000 (max. 500000)
- 360 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 375 words of extra memory for PDF output out of 10000 (max. 10000000)
 

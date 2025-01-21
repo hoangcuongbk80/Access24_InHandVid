@@ -37,19 +37,21 @@ We introduce a visibility score $v_t \in [0, 1]$ for each frame $t$, which quant
 v_t = \sigma(f_{vis}(\mathcal{F}^t_t)),
 \end{equation}
 
-\noindent where $\sigma(\cdot)$ denotes the sigmoid function. The visibility score $v_t$ represents the confidence level of object visibility in frame $t$. For training, the ground truth visibility score $v_t$ is computed as the fraction of visible object pixels in frame $t$, defined as:
+\noindent where $\sigma(\cdot)$ denotes the sigmoid function. The use of the sigmoid activation function is motivated by its ability to map outputs to a probability-like range of $[0, 1]$, making it particularly suitable for modeling visibility as a confidence score. This ensures interpretability of the output, where a value close to $1$ indicates high visibility, and a value close to $0$ indicates low visibility. Additionally, the sigmoid function provides a smooth gradient, which aids in stable optimization during training using the Binary Cross Entropy (BCE) loss.
+
+The visibility score $v_t$ represents the confidence level of object visibility in frame $t$. For training, the ground truth visibility score $v_t$ is computed as the fraction of visible object pixels in frame $t$, defined as:
 
 \begin{equation}
 v_t = \frac{|O_t|}{|O|},
 \end{equation}
 
-\noindent where $O$ is the total set of annotated object pixels, and $O_t$ represents the subset of pixels visible in frame $t$. The visibility estimation network is trained using the Binary Cross Entropy (BCE) loss, which measures the difference between predicted visibility scores $\hat{v}_t$ and ground truth scores $v_t$:
+\noindent where $O$ is the total set of annotated object pixels, and $O_t$ represents the subset of pixels visible in frame $t$. The visibility estimation network is trained using the BCE loss, which measures the difference between predicted visibility scores $\hat{v}_t$ and ground truth scores $v_t$:
 
 \begin{equation}
 \mathcal{L}_{vis} = - \frac{1}{N} \sum_{t=1}^{N} \left( v_t \log(\hat{v}_t) + (1 - v_t) \log(1 - \hat{v}_t) \right),
 \end{equation}
 
-\noindent where $N$ is the total number of frames in the dataset. This loss function penalizes incorrect predictions while ensuring the model outputs confidence values that align with ground truth visibility.
+\noindent where $N$ is the total number of frames in the dataset. The BCE loss was chosen because it is well-suited for tasks where the target values represent probabilities or binary labels. It penalizes incorrect predictions while ensuring the model outputs confidence values that align with the ground truth visibility. Together, the sigmoid activation and BCE loss enable the network to effectively learn and predict visibility scores for frames with varying levels of occlusion.
 
 \subsubsection{Object Pose Prediction Under Heavy Occlusion}
 
@@ -91,7 +93,7 @@ The transformer outputs an aggregated pose feature $\mathbf{Z}_{agg} \in \mathbb
 \mathcal{F}_{fused} = \sum_{j=1}^{C} \beta_{ij} \mathbf{V}_{occ}.
 \end{equation}
 
-\noindent The fused feature $\mathcal{F}_{fused}$ integrates information from both visible and occluded frames, enabling accurate pose predictions under occlusion. Finally, a multi-layer perceptron (MLP) processes $\mathcal{F}_{fused}$ to predict the object's pose $\hat{\mathbf{P}}_{occ}$ for the occluded frame. This approach ensures that the temporal information from visible frames compensates for the lack of visual evidence in heavily occluded frames, resulting in robust and accurate pose estimation.
+\noindent The fused feature $\mathcal{F}_{fused}$ integrates information from both visible and occluded frames, enabling accurate pose predictions under occlusion. Finally, a multi-layer perceptron (MLP) processes $\mathcal{F}_{fused}$ to predict the object's pose $\hat{\mathbf{P}}_{occ}$ for the occluded frame. The use of an MLP for this task is motivated by its ability to model complex, non-linear relationships in high-dimensional feature spaces. Specifically, the MLP acts as a flexible and computationally efficient mapping function, translating the fused feature $\mathcal{F}_{fused}$ into the 6D pose parameters (rotation and translation). Its architecture typically consists of multiple fully connected layers, interleaved with activation function ReLU, which enable the network to capture hierarchical representations of the fused information. This hierarchical modeling is particularly advantageous for tasks like pose estimation, where subtle variations in the input features can correspond to significant changes in the output pose.
 
 \subsection{Loss Function}
 
